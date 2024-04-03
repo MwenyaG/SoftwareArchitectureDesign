@@ -1,0 +1,1312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="HotelManagementSystem" id="id-ebe4d6ee50bb40b7831ac5c8cd909203" version="4.9.0">
+  <folder name="Strategy" id="id-a65493a2282c40d98d39bb404e03394e" type="strategy"/>
+  <folder name="Business" id="id-f91b27b1d0ec4f6bb223dc05812cbfd6" type="business">
+    <element xsi:type="archimate:BusinessFunction" id="id-36f6ce9d79c04227ae4738be13424009"/>
+  </folder>
+  <folder name="Application" id="id-58478055d4a847949a24c4003202b3de" type="application">
+    <element xsi:type="archimate:ApplicationComponent" name="Booking Website" id="id-a4a10f6dd9e0447998bd9b6ea46f9b0b">
+      <documentation>This is the website of the hotel, from where customers can see room type, room pricing and issue a booking request.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationComponent" name="Booking Mobile Application" id="id-4d4e4993db3e45bd9f0e07dc7cacd8f5">
+      <documentation>This is an mobile application, from where customers can see room type, room pricing and issue a booking request.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationEvent" name="Request a Reservation" id="id-0bfd3dfcb19d41358176d1182e832755">
+      <documentation>An request raised by customer to make reservation.</documentation>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Marketing Data" id="id-e4ccd0eee4ea4fe9b78bc387d9311e6b">
+      <documentation>the marketing data including room occupancy rate, occupancy time rate, price of the hotel</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Marketing Data Analysis" id="id-a21bc41664294221b08373ae014e2aa3">
+      <documentation>it is to analyze the normalized marketing data</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Report Generator" id="id-278ca6b0b62d4220a76ada8c7515d445">
+      <documentation>It is to generate regular report for managers to view.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Room Status Checking Software" id="id-5c960591987f4b08983a9fbe1f782b53">
+      <documentation>Check the status of guest rooms.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Generate Bill Software" id="id-5cafaa091b6140429b1e90fa59d8e590">
+      <documentation>Generate a summary bill for all purchases made by the customer during their stay.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Payment Validation Software" id="id-a95c74687ae9467ca06140963be774f8">
+      <documentation>Confirm that the customer has paid the corresponding amount.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Room Status Update Software" id="id-a1453505b21046ec9ce6c12ea6fdbffa">
+      <documentation>Update the status of the room previously occupied by the customer, e.g. from occupied to vacant and in need of cleaning.</documentation>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Customer Information Database" id="id-bc4ed60c448e4505be41d427dad712b3">
+      <documentation>The Central database to store the information of the customers.</documentation>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Backup Database" id="id-146e8f8f6b914653a3ddeef868fb2a93">
+      <documentation>To back up the central database.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Membership Rating Software" id="id-19074d406a8d43aabc9dad139cdf12c3">
+      <documentation>This is to build a membership system based on the customers' consumption history in the hotel.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Customer Personalized Demand Forecasting Software" id="id-5ea2e0b5ebe846a49b0664b6b56e082b">
+      <documentation>The purpose of this software is to predict users' future consumption preferences and needs based on user data to help hotels develop better marketing strategies.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Neural Network Algorithm" id="id-132bd3e6bbda47438c9ae8d6d4598423">
+      <documentation>This is the algorithm to predict the customers' future preference and requirements.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Room Data Visualizer" id="id-7908f0d211894afcae5997d2b381e745">
+      <documentation>It is to generate the view that customer can see a room on website or app.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Room Availability Check" id="id-bcb0cebcb4fe4ed193dfa36ba53dd13c">
+      <documentation>It is to check which rooms are available.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Room Management Software" id="id-cffe169993a147518f9b6438fb4337d2">
+      <documentation>Used to change whether a room is occupied or not, and to update the status of the room when a customer requests a reservation.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationCollaboration" name="Check Out Software" id="id-1b04144d84b14f03a406dd841e45fad8">
+      <documentation>The app that manages room status and the payment subapp together make up the check-out app.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationEvent" name="Check Out Request" id="id-c54da53c8ddf4bf5935bbe4d9063672e">
+      <documentation>The customer ask to check out.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationComponent" name="Employee Attendance Punch App" id="id-18a8cb7994d4448486d5d521d18bf8b4">
+      <documentation>This is used to give employees attendance during work.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Employee Attendance Record Sotfware" id="id-6b26467e24db4e458ebfa4f82c580277">
+      <documentation>Check the correctness of the data and complete the writing of the employee attendance data in the database.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Employee Performance Appraisal" id="id-42a2cfd6d2714d619350d2b03b4dd7e7">
+      <documentation>Used to evaluate employees' daily work performance.</documentation>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Employee Database" id="id-2ab2db0ee41749d0a7d8a2b0905a6f3e">
+      <documentation>A database that records employee information.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Employee Wages Calculation" id="id-4f5f4ee47d234c399f8bf6e6c05eb991">
+      <documentation>It is to calculate the employee's salary based on the employee's information.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Employee Position Scheduling Arrangement" id="id-c784025d5b724e0689b0247cff5d8c9b">
+      <documentation>Generate employee on-the-job schedule based on personnel status and job requirements.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationComponent" name="Customer Ordering App" id="id-2d3fe1548ed74758bf8862b64377de77">
+      <documentation>Guests order food through the mobile app.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Dish Preview " id="id-4c525c01457643388af313337a277534">
+      <documentation>Guests can see information about dishes that can be ordered.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Menu Selection Software" id="id-7cf7954b29df421b919850bab63c1e63">
+      <documentation>Add the desired dishes on the menu selection software.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Service Management Software" id="id-16753321ffa84e16b7cc55a681525fdb">
+      <documentation>The service management system processes the order information submitted by the guests.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationEvent" name="Order Confirmation" id="id-e97116cf64114b3684f11fba7ddf1e7e">
+      <documentation>After completing the selection, the order needs to be confirmed.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationProcess" name="Waiting in Line" id="id-3077f1784e384f30841af63b0b4e14a7">
+      <documentation>When the number of orders is large, customers need to wait in line.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Kitchen Order Dishes Display Software" id="id-326ebdefe11f4c7bb989d90926de51da">
+      <documentation>The dishes required on the order will eventually be displayed on the back kitchen to inform the chiefs what to do.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Job Demand Arrangement Software" id="id-c4a9b4ebb2b7435fb10253ee66253f87">
+      <documentation>This is used to generate the demand for various positions in the hotel.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationFunction" name="Room Card Activation" id="id-21f6cc4dfdbe45f393ff143c3f392193">
+      <documentation>When a customer checks-in, the customer will be granted an activated room card.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Front Desk Software" id="id-704e6b6ce068455fb9e0ad4227e0cb89">
+      <documentation>This will be used to register/check-in new and existing customers.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationProcess" name="Confirm Reservation" id="id-1e004a322df9418d8635ee25865a1d91">
+      <documentation>This will be used by the staff members to confirm a customers reservations.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Room Management Application" id="id-a13a1438703842fcb865474bebcc0acc">
+      <documentation>This will be used to manage the room status</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationProcess" name="Update Room Status" id="id-56f601dc36774e73a6e0dd2670ca9adf">
+      <documentation>This will be used to update the status of customer rooms</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Room Availability Check" id="id-60c26f1795ad4e96a4362f2f0dbb9232">
+      <documentation>This will allow the staff members to see rooms that are available</documentation>
+    </element>
+    <element xsi:type="archimate:DataObject" name="Employee Backup Database" id="id-6540c046620d4f609afdc3ba0526d0c3">
+      <documentation>Back up the employee database.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Marketing Data Collector" id="id-53a541184e6d495a89dd807c24ebbd9f">
+      <documentation>The software components that collects the marketting data. It may includes the data within the hotel itself and from competitors.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Data Preprocessor" id="id-cceb7a9aa1424b5d9fcf92298bef98b0">
+      <documentation>Process the raw data from the database into required format.
+</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Marketing Prediction App" id="id-47d08fad7e674f4aa6295f8c5e18059d">
+      <documentation>It adopts AI technology to make some marketing predictions to help make business decisions.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationFunction" name="Deep Learning Algorithm" id="id-a27893d5f698411ca01da593ecc2196a">
+      <documentation>It is an algorithm to build the model to make predictions</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationComponent" name="Third-party Payment App" id="id-6f8488a5674e427cb557fff89f11a5f4"/>
+    <element xsi:type="archimate:ApplicationComponent" name="Front Desk Bookkeeping App" id="id-88f802f003874255ab8be186055f3136"/>
+    <element xsi:type="archimate:ApplicationInterface" name="Bill Generator" id="id-b5e0989be21a4588884bddad97ff4986"/>
+    <element xsi:type="archimate:DataObject" name="Consumption Record Database" id="id-8bd56409f8ee4f8f91098552cd88da60"/>
+    <element xsi:type="archimate:ApplicationComponent" name="Invoice Generator" id="id-3b55e8a7bcef41709643d442894d3a70"/>
+    <element xsi:type="archimate:DataObject" name="Inventory Database" id="id-08adb6b187a64be994fbc5c282fdda95">
+      <documentation>Record the data of each inventory.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Inventory Management Software" id="id-17b8ba94065f4cba842eb0fc3f9ebbb4">
+      <documentation>Inventory management software, responsible for updating inventory data.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationInterface" name="Purchase Entry Interface" id="id-6f2d70731cd74e70a0a6aabd92a404bd">
+      <documentation>Software interface for increasing inventory after purchasing goods.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationInterface" name="Consumption and Expenditure Interface" id="id-4b7b3bbbbfe24912a87ee5f9a1e6627b">
+      <documentation>The registration software interface of the goods out of the warehouse, the goods to be consumped.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Inventory Query  Software" id="id-d78d8b46e6914c66a6ce67ad241d6ab7">
+      <documentation>Software for querying the relevant data of each inventory.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Inventory Counting Software" id="id-e2b67db7183345f9b71db634d2f6f40b">
+      <documentation>The software counts the current inventory status.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Purchasing Demand Analysis" id="id-a87ba0dc398b426a9195431d4761db8e">
+      <documentation>Software that calculates purchase requirements based on inventory status.</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Room Card Reset App" id="id-74d81e0841d540639698cb9b8d7b326c">
+      <documentation>After the customers have checked out successfully, the room card needs to be reset.
+</documentation>
+    </element>
+    <element xsi:type="archimate:ApplicationService" name="Customer Consumption History App" id="id-a0c7ec2deb3843ae9cab083eeb2113de">
+      <documentation>The app allows  to look for customer's consumption history if needed.</documentation>
+    </element>
+  </folder>
+  <folder name="Technology &amp; Physical" id="id-306aeacc4a284454a05659ae8393752d" type="technology">
+    <element xsi:type="archimate:Equipment" name="Vehicle License Plate Recognition Camera" id="id-630990e8b40942768235f81101232170">
+      <documentation>Used to identify the license plate information of the vehicle that you want to enter and exit.</documentation>
+    </element>
+    <element xsi:type="archimate:Device" name="MainFrame Computer (Calculating Price)" id="id-25b3c5ee77154edaa9be872a84758403">
+      <documentation>It is to calculate the price based on the vehicle information (like time stayed in the parking lot) and the owner's hotel information.</documentation>
+    </element>
+    <element xsi:type="archimate:Equipment" name="Lifting Lever" id="id-c9dc8ff0341f4eefb1af93240edb8642">
+      <documentation>Controlled by the administrator to control the entry and exit of vehicles.</documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="PC" id="id-703bd890877d4a0f9e46578893d89116">
+      <documentation>Personal Computer used by parking lot manager.</documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="Switch" id="id-6c240b01f7f342b596b915d2a0cadb70">
+      <documentation>This is a switch, convey data within the system.</documentation>
+    </element>
+    <element xsi:type="archimate:Equipment" name="Electrical Circuit" id="id-d644a2181345460887a92217052d6c12">
+      <documentation>Concentrated circuits for televisions, networks, and other electronic equipment.</documentation>
+    </element>
+    <element xsi:type="archimate:Equipment" name="Toilet Circuit" id="id-fbba322c0d2d45a69bfc3cea3ce2194a">
+      <documentation>The main circuit of the toilet.</documentation>
+    </element>
+    <element xsi:type="archimate:Equipment" name="Centralized Control Board" id="id-cb4e7d13faca4c6f93f584f3379e016c">
+      <documentation>Power supply for other control panels in the room.</documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="Relay Point" id="id-3ed60f7b30864511a28525b5240ced03">
+      <documentation>It is a relay point to connect the main circuits in the room</documentation>
+    </element>
+    <element xsi:type="archimate:Equipment" name="Back Circuit" id="id-ea86c197f9f54047b0d0bdc9e51955c5">
+      <documentation>backup circuit in case any other circuit is in failure.</documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="Card Switch" id="id-70b4b23d361c444aa6537926d8538d23">
+      <documentation>It is the place where the card is inserted, also the main swicth of the whole room. </documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="Room Card Recognizer" id="id-6cd82c75e6e042e38f467935223e4e21">
+      <documentation>It is to recognize the IC card inserted.</documentation>
+    </element>
+    <element xsi:type="archimate:Device" name="MainFrame Computer" id="id-61dcfb01be9d4ec9ae5e4300369f7a7e">
+      <documentation>It is to judge whether the inserted card is the corresponding registered room card.
+</documentation>
+    </element>
+    <element xsi:type="archimate:Device" name="Web Server" id="id-e049e9761d1342a9a222b2a0095ef2fa">
+      <documentation>The hotel’s web server provides Internet-related services, such as online reservations.</documentation>
+    </element>
+    <element xsi:type="archimate:Device" name="MainFrame Computer" id="id-83dbc12c773d45e5a0b51b40013e5457">
+      <documentation>The mainframe computer handles the business and requests inside the hotel.</documentation>
+    </element>
+    <element xsi:type="archimate:Device" name="Database Server" id="id-2bea988f412e4f448a82895084ffe2aa">
+      <documentation>Mainly responsible for storing data.</documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="Switch" id="id-9dbf4df406ed46d9b4cb32ee954318d3">
+      <documentation>The switch is mainly responsible for the communication between the data server and the service provider host, as well as the connection between them and other parts.</documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="Router" id="id-3aea6d1b039c42d3b2f94dd3eff75b1e">
+      <documentation>Router, connect the hotel's internal network and external network.</documentation>
+    </element>
+    <element xsi:type="archimate:TechnologyService" name="Firewall" id="id-db7e843610b84b99b6c3f9d1cd4d1ff5">
+      <documentation>The firewall protects the company's internal network from external network attacks.</documentation>
+    </element>
+    <element xsi:type="archimate:CommunicationNetwork" name="Internet" id="id-8cfd1dd8dbae4347b6ab012ce1eecc27">
+      <documentation>The Internet, the external network.</documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="Switch" id="id-375e2221f5054aa3bda08c4e32de0448">
+      <documentation>A switch to connect the staff's PCs.</documentation>
+    </element>
+    <element xsi:type="archimate:Device" name="Staff End" id="id-0764b77678154950afeb93ebc4ddfed8">
+      <documentation>PCs that owned by hotel staff to deal with daily working requirements.</documentation>
+    </element>
+    <element xsi:type="archimate:Facility" name="Camera" id="id-e8c8d4cc5aa74befa2ff91c139bcb1cd">
+      <documentation>It includes different models of cameras distributed in various locations.
+</documentation>
+    </element>
+    <element xsi:type="archimate:CommunicationNetwork" name="Access Switch" id="id-8c81b9b204db43778d34e5a7331b3ba2">
+      <documentation>It is used to gather the captured data of cameras in an area.</documentation>
+    </element>
+    <element xsi:type="archimate:CommunicationNetwork" name="Core Switch" id="id-1cb69a956926400fb5072747430b7686">
+      <documentation>The central switch is used to connect multiple distributed access points.</documentation>
+    </element>
+    <element xsi:type="archimate:Facility" name="Hard Disk Video Recorder" id="id-bb0ea1ec560742da890de93d015dcc49">
+      <documentation>Used to store the captured videos.</documentation>
+    </element>
+    <element xsi:type="archimate:Facility" name="Monitor" id="id-c470b5a83acb4452933021e4c2497824">
+      <documentation>Monitors installed in monitoring rooms and, for example, reception halls.</documentation>
+    </element>
+    <element xsi:type="archimate:Device" name="PC" id="id-9492a0883536447eaa0eed8635a90a58">
+      <documentation>The personal computer of a specific administrator responsible for viewing and monitoring.</documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="Router" id="id-a730c644bc964b4fb9fbc997d47c33e0">
+      <documentation>Routing the captured image to the remote device.</documentation>
+    </element>
+    <element xsi:type="archimate:Equipment" name="Remote Monitoring Equipment" id="id-eae1dd4c2b0c47c2a692c2d628d7ed57">
+      <documentation>Remotely connected monitoring equipment, such as mobile phones.</documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="Switch" id="id-07883a60f9f6449c8bd081e3724f4e6a">
+      <documentation>A switch that connects all the office telephone.</documentation>
+    </element>
+    <element xsi:type="archimate:Equipment" name="Office Telephone" id="id-868a80f043824368ae1fe25c143537a4">
+      <documentation>It represents all the phones installed in the staff's office.</documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="Switch" id="id-0bae3efbd57f4261a0e67f7a87ffb3b2">
+      <documentation>A switch that connects all the front desk phones.</documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="IAD" id="id-6c6bffaaf979457994320b7935d92965">
+      <documentation>An integrated access device, an access device that can simultaneously deliver traditional PSTN voice services, packet voice services, and data services on a single WAN link (via LAN ports).</documentation>
+    </element>
+    <element xsi:type="archimate:Equipment" name="Guest Room Telephone" id="id-4818db762cb94213b6408560a5d5d730">
+      <documentation>It represents all the guest room telephones.</documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="Router" id="id-741f912de81442b488b8a6d1e8610210">
+      <documentation>Router, connecting the hotel's internal network and the outside</documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="Switch" id="id-460b3e958917425ba9a2f1302409b42b">
+      <documentation>Switch, serves as a line integration point.</documentation>
+    </element>
+    <element xsi:type="archimate:Equipment" name="Attendant Console Server" id="id-e0ffc30819714cefb7dbfd6699a8bcb4">
+      <documentation>The intelligent voice server can be set to automate the common services of the terminal.</documentation>
+    </element>
+    <element xsi:type="archimate:Equipment" name="Front Desk Phone" id="id-9cf3501c41e140e49b310091e25bc72c">
+      <documentation>It represents all the phones installed in the front desk.</documentation>
+    </element>
+    <element xsi:type="archimate:Facility" name="Carrier Telephone  Line" id="id-ce51ee6c4bf347afb96ddf33cedded49">
+      <documentation>carrier telephone line provided by the ISP that the hotel selects</documentation>
+    </element>
+    <element xsi:type="archimate:Equipment" name="Recording Management Equipment" id="id-052b71a8010b41af9b6b1bb28f15c61d">
+      <documentation>The communication history can be recorded and saved as needed.</documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="Aggregation Switch" id="id-b1575a25b8434af7a44ac31d2a488c40">
+      <documentation>Aggregation switch, connecting all floor switches.</documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="Floor Switch" id="id-f3d973f825a74b58b1ec50d9337d66a9">
+      <documentation>Floor switch, which connects hosts in all rooms of the floor.</documentation>
+    </element>
+    <element xsi:type="archimate:TechnologyService" name="Room Control Host" id="id-4c343388c4944e7182d13bbaa2c5df5e">
+      <documentation>Take control of all the smart appliances in the room.</documentation>
+    </element>
+    <element xsi:type="archimate:Device" name="Server" id="id-2c66f501ea3d4edcb470173d4e2bdf43">
+      <documentation>Server that execute some complex tasks, can be used remotely be workers from engineering department.</documentation>
+    </element>
+    <element xsi:type="archimate:Device" name="FrontDesk" id="id-736e644d31894b3ea124e55287a178ac">
+      <documentation>frontdesk PC, can also make simple control operations in case the customer requires or the room is empty.</documentation>
+    </element>
+    <element xsi:type="archimate:Device" name="Engineering Department" id="id-794f32cdb99141ac9a56f762591a80c2">
+      <documentation>Workstations of engineering department, from where all the configurations are set and maintained.</documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="Controlled Home Appliances" id="id-da2271fa6e4e428e80cf792bbf44eb3d">
+      <documentation>electrical appliances that can be controlled smartly</documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="Sensor" id="id-e6bc085f784041bfae6b058fce2a0c44">
+      <documentation>Sensors in the room, including voice and infrared sensors.</documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="Control Panel" id="id-78cb0d06d7ca465bbc69d51be23326bd">
+      <documentation>control panel that can operates and control IoTs in the room</documentation>
+    </element>
+    <element xsi:type="archimate:Device" name="MainFrame Server" id="id-2b02e773d11d417f8dde01c5393b3cd0">
+      <documentation>The mainframe server processes the service request.</documentation>
+    </element>
+    <element xsi:type="archimate:Device" name="FrontDesk PC" id="id-d3b7999e1a8a4ff298b995d9d4385bb1">
+      <documentation>The computers of the front desk staff provide customers with bill inquiry services.</documentation>
+    </element>
+    <element xsi:type="archimate:Device" name="Manager PC" id="id-634d1251ccac41ae96b15a9abc8a4a5e">
+      <documentation>The manager’s personal computer can query the relevant content that he wants to see from the mainframe server.</documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="Switch" id="id-ac88ee58519244578fb314d3ea1468cc">
+      <documentation>The switch acts as a communication node between the front and back devices.</documentation>
+    </element>
+    <element xsi:type="archimate:TechnologyFunction" name="POS" id="id-d0794b2775544b0cbb702d3d3064e845">
+      <documentation>POS machine supports non-cash settlement.</documentation>
+    </element>
+    <element xsi:type="archimate:TechnologyFunction" name="Cashier" id="id-d601cc508d3a4dada3bb7a85eb41817a">
+      <documentation>Cash register, support customer cash payment</documentation>
+    </element>
+    <element xsi:type="archimate:TechnologyFunction" name="Printer" id="id-7a922d8771524390bac64355ed674a25">
+      <documentation>Printer, responsible for printing receipts.</documentation>
+    </element>
+    <element xsi:type="archimate:Device" name="Data Backup Server" id="id-c330326c65cb48e3bdabad902af18982">
+      <documentation>The data server stores data and backs up the data.</documentation>
+    </element>
+    <element xsi:type="archimate:Equipment" name="Smoke Detector" id="id-7a3a80e2e3464c5aa56c8657b5ccd17d">
+      <documentation>Smoke detectors installed in different locations of the hotel to detect whether there is smoke.</documentation>
+    </element>
+    <element xsi:type="archimate:Equipment" name="Temperature Detector" id="id-11dbdae5f0e34f529aea64155d9c7744">
+      <documentation>Temperature detectors installed in different locations of the hotel to detect if there is an abnormal rise in local temperature.</documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="Switch" id="id-0c5bd7784c0143e9b2dab8b29856ea4f">
+      <documentation>switch to connect decentralized detection equipment</documentation>
+    </element>
+    <element xsi:type="archimate:Device" name="Control Server" id="id-cb03e61c214749f7b84c29f18152aa08">
+      <documentation>Control server processes different signal from the multiple detectors and sends control signals to fire fighting devices to work.</documentation>
+    </element>
+    <element xsi:type="archimate:Equipment" name="Fire Fan" id="id-663a8aa3fa5a47a08e82eea6e5a25f7f">
+      <documentation>Fire-fighting fan, used to disperse smoke.</documentation>
+    </element>
+    <element xsi:type="archimate:Equipment" name="Fire Pump" id="id-185895e806304033ad2a47f012f782ab">
+      <documentation>Fire-fighting water pumps are used to extinguish fires.</documentation>
+    </element>
+    <element xsi:type="archimate:Equipment" name="Fire Shutter  Door" id="id-08a11f69f27d4e5083f0675e173a9edb">
+      <documentation>Fire doors slow down the spread of the burning area.</documentation>
+    </element>
+    <element xsi:type="archimate:Equipment" name="Fire Elevator" id="id-d1f34f38b2144cab887ee25e74336a4b">
+      <documentation>Fire elevator, dedicated evacuation channel in case of emergency.</documentation>
+    </element>
+    <element xsi:type="archimate:Node" name="Switch" id="id-8f3b0479126d48c7981fa1ee3ee28ac8">
+      <documentation>The switch that connects all fire-fighting equipment centrally is responsible for the precise transmission of corresponding signals in one step.</documentation>
+    </element>
+    <element xsi:type="archimate:Equipment" name="Audible and Visual  Alarm" id="id-326c26bb47824793a9d1ae8779ba0468">
+      <documentation>Audible and visual alarms are installed in different locations of the hotel to warn the crowd in the event of a situation.</documentation>
+    </element>
+    <element xsi:type="archimate:Equipment" name="Equipment" id="id-f3a6500480ee42908a68a7bce67a9751"/>
+    <element xsi:type="archimate:Equipment" name="Manual Fire Alarm Telephone" id="id-d286136f5769404fa2df94d925b91cdb">
+      <documentation>Manual fire alarm telephones are installed in some designated locations of the hotel. If someone finds a fire, they can immediately report the situation.</documentation>
+    </element>
+  </folder>
+  <folder name="Motivation" id="id-197c10ba9c1a4a7eb3997482eb910b5b" type="motivation"/>
+  <folder name="Implementation &amp; Migration" id="id-62929b9d0891438592fef15b4158bec7" type="implementation_migration"/>
+  <folder name="Other" id="id-6bd86d7d22554206adb5f3e135f702cf" type="other">
+    <element xsi:type="archimate:Grouping" id="id-752982cee5534d1dac6f5692fda05b2e"/>
+    <element xsi:type="archimate:Grouping" name="Grouping" id="id-6a15683a51ca46198623129893e988ec"/>
+  </folder>
+  <folder name="Relations" id="id-aa3739314a644e27a500d6f6b05e8d84" type="relations">
+    <element xsi:type="archimate:AssociationRelationship" id="id-36878e99f7834f2f994c4ebccdcf9173" source="id-a4a10f6dd9e0447998bd9b6ea46f9b0b" target="id-0bfd3dfcb19d41358176d1182e832755">
+      <documentation>The resquest for reservation may come from website end.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-fc9bd3d9a66d4e18ab85e384bf5b2ac0" source="id-4d4e4993db3e45bd9f0e07dc7cacd8f5" target="id-0bfd3dfcb19d41358176d1182e832755">
+      <documentation>The resquest for reservation may come from mobile app.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-9db404832d404796a597ecdb8aa1d56a" source="id-6c240b01f7f342b596b915d2a0cadb70" target="id-630990e8b40942768235f81101232170">
+      <documentation>Captured vehicle license is passed to MainFrame Computer.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-f8ee38d7931843839c231cc355c88777" source="id-6c240b01f7f342b596b915d2a0cadb70" target="id-25b3c5ee77154edaa9be872a84758403">
+      <documentation>Receiving data from vehicle license, and sending the calculated price to the PC.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-0523656dfc984cb2973a68b0a6ada1d7" source="id-c9dc8ff0341f4eefb1af93240edb8642" target="id-6c240b01f7f342b596b915d2a0cadb70">
+      <documentation>Receving signal from PC to decide its own action.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-86446c1f3a4841d087b7f921c8c7248f" source="id-6c240b01f7f342b596b915d2a0cadb70" target="id-703bd890877d4a0f9e46578893d89116">
+      <documentation>Receiving price data from MainFrame Computer. Sending control signal to lifting lever.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-558ac6f85ed345099244157c37acd57a" source="id-bc4ed60c448e4505be41d427dad712b3" target="id-146e8f8f6b914653a3ddeef868fb2a93">
+      <documentation>Data from the primary database is backed up periodically in the backup database.</documentation>
+    </element>
+    <element xsi:type="archimate:CompositionRelationship" id="id-35dc158f25b244ef98755deb3ad8c17a" source="id-5ea2e0b5ebe846a49b0664b6b56e082b" target="id-132bd3e6bbda47438c9ae8d6d4598423"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-b6f036c094f64e118776a29b753017fa" source="id-19074d406a8d43aabc9dad139cdf12c3" target="id-bc4ed60c448e4505be41d427dad712b3">
+      <documentation>Customers’ spending records are sent to the membership rating system.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-324aba75d80c414297fe2e4ba13e0138" source="id-bc4ed60c448e4505be41d427dad712b3" target="id-5ea2e0b5ebe846a49b0664b6b56e082b">
+      <documentation>Required data of customers to make prediction is passed.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-777a979919d2461e830ba3e14349b267" source="id-7908f0d211894afcae5997d2b381e745" target="id-bcb0cebcb4fe4ed193dfa36ba53dd13c">
+      <documentation>&quot;which rooms are available&quot; is told to room data visualizer</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-f68e2406ca87454aa3f84171b77182cb" source="id-a4a10f6dd9e0447998bd9b6ea46f9b0b" target="id-7908f0d211894afcae5997d2b381e745">
+      <documentation>The generated view can be seen on website.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-407ed77b63a94d66b05f20f18c6635bf" source="id-7908f0d211894afcae5997d2b381e745" target="id-4d4e4993db3e45bd9f0e07dc7cacd8f5">
+      <documentation>The generated view can be seen on mobile app.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-db6ed0ea4f1249049f28133462970dd9" source="id-0bfd3dfcb19d41358176d1182e832755" target="id-cffe169993a147518f9b6438fb4337d2">
+      <documentation>The reservation request is sent to the hotel room management system.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-ae3f49a7fef04388a54a81dab037d0c0" source="id-5c960591987f4b08983a9fbe1f782b53" target="id-a1453505b21046ec9ce6c12ea6fdbffa">
+      <documentation>The room status check system further sends the room information to the room status update system.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-9bc634b18c5c4e54ba3aeb5235bf3336" source="id-5cafaa091b6140429b1e90fa59d8e590" target="id-a95c74687ae9467ca06140963be774f8">
+      <documentation>The amount due after the bill is generated is sent to the payment validation app.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-1279b4936c634af18145d6166c5ce58d" source="id-1b04144d84b14f03a406dd841e45fad8" target="id-5c960591987f4b08983a9fbe1f782b53">
+      <documentation>The check-out system tells the occupant's room number to the room status check system.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-b4dff72ab39446b58e9dc8dedf0a83be" source="id-c54da53c8ddf4bf5935bbe4d9063672e" target="id-1b04144d84b14f03a406dd841e45fad8">
+      <documentation>The guest's check-out request is sent to the check-out system.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-242cf2369c5a4629bb71e432b1529217" source="id-1b04144d84b14f03a406dd841e45fad8" target="id-5cafaa091b6140429b1e90fa59d8e590">
+      <documentation>Guest information is sent to the bill generation system.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-d596f9212e604858a6adf7ba44872a80" source="id-18a8cb7994d4448486d5d521d18bf8b4" target="id-6b26467e24db4e458ebfa4f82c580277">
+      <documentation>The employee attendance information is sent to the attendance recording software.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-ba08b3ab4a854a1093b11c16978de171" source="id-6b26467e24db4e458ebfa4f82c580277" target="id-2ab2db0ee41749d0a7d8a2b0905a6f3e">
+      <documentation>Employee attendance records are verified and stored in a database.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-40fe63c1d6d349a69bed4eb2e12fda50" source="id-42a2cfd6d2714d619350d2b03b4dd7e7" target="id-2ab2db0ee41749d0a7d8a2b0905a6f3e">
+      <documentation>The employee’s daily work performance is sent to the employee’s database.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-75bce34171f94719beee5f4d43851c5a" source="id-2d3fe1548ed74758bf8862b64377de77" target="id-4c525c01457643388af313337a277534">
+      <documentation>The visualized information of the dishes is sent to the customer’s ordering app.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-c923914a82934b7f82b43940ee9e158e" source="id-2d3fe1548ed74758bf8862b64377de77" target="id-7cf7954b29df421b919850bab63c1e63">
+      <documentation>Customers choose dishes through the ordering application.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-bcda5ba6ee6641858676de4515856d51" source="id-7cf7954b29df421b919850bab63c1e63" target="id-e97116cf64114b3684f11fba7ddf1e7e">
+      <documentation>The final dish selection information generates an order to be confirmed.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-76488f10176240cc87d1165e23aeb501" source="id-e97116cf64114b3684f11fba7ddf1e7e" target="id-16753321ffa84e16b7cc55a681525fdb">
+      <documentation>The order information to be confirmed is sent to the hotel’s service management application.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-0679fe67ddf44de1b3d2f1606aad521b" source="id-16753321ffa84e16b7cc55a681525fdb" target="id-3077f1784e384f30841af63b0b4e14a7">
+      <documentation>The hotel’s service management application confirms the acceptance of the guest’s order and sends it to the queuing system.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-4a8cdec0181b40d8b6cd466868433319" source="id-3077f1784e384f30841af63b0b4e14a7" target="id-326ebdefe11f4c7bb989d90926de51da">
+      <documentation>After the order is queued up, it is sent to the back kitchen system.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-8e77da451b074e40be04cc3b26a9bb5d" source="id-2d3fe1548ed74758bf8862b64377de77" target="id-16753321ffa84e16b7cc55a681525fdb">
+      <documentation>The hotel service system feeds back the subsequent status update information to the user's ordering App.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-755c2d4713464b2ca8f4c048762f221a" source="id-2ab2db0ee41749d0a7d8a2b0905a6f3e" target="id-4f5f4ee47d234c399f8bf6e6c05eb991">
+      <documentation>The information needed to calculate the employee’s salary is sent to the salary calculation module.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-b2d502a9dc7f4269a44b2beea67db279" source="id-2ab2db0ee41749d0a7d8a2b0905a6f3e" target="id-c784025d5b724e0689b0247cff5d8c9b">
+      <documentation>The employee's personal information is sent to the employee postion scheduling software.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-dd8d441b872c4fb3bafb65373c0bdba0" source="id-18a8cb7994d4448486d5d521d18bf8b4" target="id-c784025d5b724e0689b0247cff5d8c9b">
+      <documentation>Send the generated arrangement to the corresponding employee’s terminal so that they can check attendance according to the arrangement.
+</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-116a4513c0584a73b1f09779e2690109" source="id-c784025d5b724e0689b0247cff5d8c9b" target="id-c4a9b4ebb2b7435fb10253ee66253f87">
+      <documentation>The personnel requirement information is sent to the employee postion scheduling
+ software.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-f4859dd256794157a840a25fd7a9a3ca" source="id-704e6b6ce068455fb9e0ad4227e0cb89" target="id-1e004a322df9418d8635ee25865a1d91">
+      <documentation>the request to comfirm the reservation is raised by the front desk query software.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-937e9682b4614e6fae961e0453cbb6d7" source="id-1e004a322df9418d8635ee25865a1d91" target="id-a13a1438703842fcb865474bebcc0acc">
+      <documentation>The feedback of whether the customer has succssfully booked will be sent from room management app to front desk query software.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-b80a8d58409e43b3a5e796dff1136846" source="id-56f601dc36774e73a6e0dd2670ca9adf" target="id-a13a1438703842fcb865474bebcc0acc">
+      <documentation>the request to update room status is handled by room management software.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-fd5c870f5ab04334b69725cfff722d35" source="id-a13a1438703842fcb865474bebcc0acc" target="id-704e6b6ce068455fb9e0ad4227e0cb89"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-dfca67a3cb844302807ae11fb69796b7" source="id-21f6cc4dfdbe45f393ff143c3f392193" target="id-704e6b6ce068455fb9e0ad4227e0cb89">
+      <documentation>the front desk query software has the ability to activate the room card</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-f626a5ee96dd427584468b1d3729784e" source="id-704e6b6ce068455fb9e0ad4227e0cb89" target="id-60c26f1795ad4e96a4362f2f0dbb9232">
+      <documentation>the request to check the room availability is raised by the front desk query software.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-9a197036e747477f99977f3dd79df09a" source="id-60c26f1795ad4e96a4362f2f0dbb9232" target="id-a13a1438703842fcb865474bebcc0acc">
+      <documentation>what rooms are available will be sent from room management application to front desk query software</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-88a2fc1dea0f4a529f6712866c08b8d8" source="id-704e6b6ce068455fb9e0ad4227e0cb89" target="id-56f601dc36774e73a6e0dd2670ca9adf">
+      <documentation>front desk query software require to update a room status </documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-aa17f162471547b9b8c04a27523a9930" source="id-d644a2181345460887a92217052d6c12" target="id-3ed60f7b30864511a28525b5240ced03">
+      <documentation>It connects the eletrical circuit to the relay point.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-030a96391ebf4155ae72cd4b16aad06a" source="id-3ed60f7b30864511a28525b5240ced03" target="id-fbba322c0d2d45a69bfc3cea3ce2194a">
+      <documentation>It connects the toilet circuit to the relay point.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-0343e6dac31c482c9df27443f893c1c4" source="id-3ed60f7b30864511a28525b5240ced03" target="id-cb4e7d13faca4c6f93f584f3379e016c">
+      <documentation>It connects the centralized control board to the relay point.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-0628648c11b342f6bf9657b40e0c4e03" source="id-ea86c197f9f54047b0d0bdc9e51955c5" target="id-70b4b23d361c444aa6537926d8538d23">
+      <documentation>It connects the backup circuit and the card switch.
+</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-c79693517db84951a8aa18659ab27365" source="id-70b4b23d361c444aa6537926d8538d23" target="id-3ed60f7b30864511a28525b5240ced03">
+      <documentation>It connects the card switch and relay point.
+</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-6d095a2e58054de9909842ac65bac91e" source="id-6cd82c75e6e042e38f467935223e4e21" target="id-70b4b23d361c444aa6537926d8538d23">
+      <documentation>once a card is inserted into the card switch, the room card recognizer starts working
+ </documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-f5297d5ef58149fea42e7302c283a5ca" source="id-6cd82c75e6e042e38f467935223e4e21" target="id-61dcfb01be9d4ec9ae5e4300369f7a7e">
+      <documentation>The result recognition will be sent from Room Card Recognizer to MainFrame Computer.
+</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-9173ae38cc884991a264c080cecfe368" source="id-2bea988f412e4f448a82895084ffe2aa" target="id-9dbf4df406ed46d9b4cb32ee954318d3">
+      <documentation>data link between database server and the server subnet central switch</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-122ae9ac485e4cee947e91705c48ed08" source="id-9dbf4df406ed46d9b4cb32ee954318d3" target="id-83dbc12c773d45e5a0b51b40013e5457">
+      <documentation>data link between mainframe server and the server subnet central switch</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-0787def34e3e4d30972787801aeaa655" source="id-9dbf4df406ed46d9b4cb32ee954318d3" target="id-3aea6d1b039c42d3b2f94dd3eff75b1e">
+      <documentation>the connection between server subnet and the router</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-9623c985947c44b09d1ac2d7afb2fb23" source="id-3aea6d1b039c42d3b2f94dd3eff75b1e" target="id-e049e9761d1342a9a222b2a0095ef2fa">
+      <documentation>Link between the hotel web server and the hotel router</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-f36d67305584404ea06dae464f35833e" source="id-db7e843610b84b99b6c3f9d1cd4d1ff5" target="id-3aea6d1b039c42d3b2f94dd3eff75b1e">
+      <documentation>firewall needs to be connected to the router where the external network and the internal network meets </documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-c355494adee447888464fe245b94a4f2" source="id-8cfd1dd8dbae4347b6ab012ce1eecc27" target="id-3aea6d1b039c42d3b2f94dd3eff75b1e">
+      <documentation>The link between the hotel master router and the external network</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-9ba2cea5bb0340619d3777bf2e3440a7" source="id-3aea6d1b039c42d3b2f94dd3eff75b1e" target="id-375e2221f5054aa3bda08c4e32de0448">
+      <documentation>connection between staff end subnet and the router</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-4e09c6764f7c464e8980cac7ecd3519b" source="id-375e2221f5054aa3bda08c4e32de0448" target="id-0764b77678154950afeb93ebc4ddfed8">
+      <documentation>link between staff's PC and the switch</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-b7702ae0bae844e5b8593257bf5b7d94" source="id-1cb69a956926400fb5072747430b7686" target="id-8c81b9b204db43778d34e5a7331b3ba2">
+      <documentation>Multiple access switches will be connected to the core switch.
+</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-f64ad1b1bd584116a09649e1f43b5e3d" source="id-8c81b9b204db43778d34e5a7331b3ba2" target="id-8c81b9b204db43778d34e5a7331b3ba2"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-81e172ee712541c899b1f4b44f3b20d8" source="id-8c81b9b204db43778d34e5a7331b3ba2" target="id-e8c8d4cc5aa74befa2ff91c139bcb1cd">
+      <documentation>Multiple access switches are connected to the core switch.
+</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-e5b945c742034511bd295f586ac9bdfe" source="id-1cb69a956926400fb5072747430b7686" target="id-a730c644bc964b4fb9fbc997d47c33e0">
+      <documentation>Data channel between router and core switch.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-c35d8d6cbba44c02ab6cefd2f3d1e9be" source="id-eae1dd4c2b0c47c2a692c2d628d7ed57" target="id-a730c644bc964b4fb9fbc997d47c33e0">
+      <documentation>Required video documents will be routed to remote monitoring equipment.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-edb1652dc4b243719992038ddf46cf1f" source="id-bb0ea1ec560742da890de93d015dcc49" target="id-1cb69a956926400fb5072747430b7686">
+      <documentation>Data channel between hard disk video recorder and core switch.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-006fb75d93e1408b8711a9d8bd9829b2" source="id-c470b5a83acb4452933021e4c2497824" target="id-1cb69a956926400fb5072747430b7686">
+      <documentation>Data channel between monitor and core switch.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-ae4f5505249547cfa626bbc20943edac" source="id-9492a0883536447eaa0eed8635a90a58" target="id-1cb69a956926400fb5072747430b7686">
+      <documentation>Data channel between core switch and PC.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-076fe0b3b20a4cd29bbcf1063a20ec22" source="id-07883a60f9f6449c8bd081e3724f4e6a" target="id-868a80f043824368ae1fe25c143537a4">
+      <documentation>All the office telephones are connected to a switch.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-b5206c41f06544c3921603f2de51cef8" source="id-6c6bffaaf979457994320b7935d92965" target="id-4818db762cb94213b6408560a5d5d730">
+      <documentation>LAN Ports that for IAD to provide service to guest room telephone.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-0552aa80ebf3400ea3f5fcf48fa6cb9d" source="id-0bae3efbd57f4261a0e67f7a87ffb3b2" target="id-9cf3501c41e140e49b310091e25bc72c">
+      <documentation>All the front desk phones are connected to switch.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-fdba97e8549443f3b4b1269045c468b9" source="id-741f912de81442b488b8a6d1e8610210" target="id-07883a60f9f6449c8bd081e3724f4e6a">
+      <documentation>the link that connects the router to the switch</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-5b7cccc60ed5467493a2490a1f0d9ee6" source="id-741f912de81442b488b8a6d1e8610210" target="id-0bae3efbd57f4261a0e67f7a87ffb3b2">
+      <documentation>the link that connects the router to the switch</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-d82711ea4b2b49f7af3dbc3457f832a8" source="id-741f912de81442b488b8a6d1e8610210" target="id-460b3e958917425ba9a2f1302409b42b">
+      <documentation>Data link, connecting the router and the switch, so that the end communication devices are connected with ISP and server device.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-e0f1f372de004390a3d18317f4a0ee0d" source="id-ce51ee6c4bf347afb96ddf33cedded49" target="id-460b3e958917425ba9a2f1302409b42b">
+      <documentation>The connection between the external ISP’s line and the hotel’s intranet.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-51b9f60923c146b6bfa56584cda5df39" source="id-460b3e958917425ba9a2f1302409b42b" target="id-e0ffc30819714cefb7dbfd6699a8bcb4">
+      <documentation>communication line between attendant console server and other devices</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-763094f05efb4c3e81b8e9d816a73701" source="id-460b3e958917425ba9a2f1302409b42b" target="id-052b71a8010b41af9b6b1bb28f15c61d">
+      <documentation>The communication data transmitted on this link to Recording Management Equipment.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-c9560e61c5104c55ba4d5f5d0d9a7f5d" source="id-e6bc085f784041bfae6b058fce2a0c44" target="id-4c343388c4944e7182d13bbaa2c5df5e">
+      <documentation>control signal</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-2a6c7db4b906433a8452a101a38deff4" source="id-78cb0d06d7ca465bbc69d51be23326bd" target="id-4c343388c4944e7182d13bbaa2c5df5e">
+      <documentation>control signal</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-6a67bff505804cb98825f6d85ca1f1f6" source="id-da2271fa6e4e428e80cf792bbf44eb3d" target="id-4c343388c4944e7182d13bbaa2c5df5e">
+      <documentation>control signals</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-a1379df4c2b747e19e83cc6a144296b0" source="id-4c343388c4944e7182d13bbaa2c5df5e" target="id-f3d973f825a74b58b1ec50d9337d66a9">
+      <documentation>data link between floor switch and room control hosts.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-c612f83bf5d34fd3908de445f3d6925d" source="id-f3d973f825a74b58b1ec50d9337d66a9" target="id-b1575a25b8434af7a44ac31d2a488c40">
+      <documentation>data link between aggregation switch and floor switches.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-75db9c106dfc406e9700edd56508d108" source="id-794f32cdb99141ac9a56f762591a80c2" target="id-b1575a25b8434af7a44ac31d2a488c40">
+      <documentation>communication link between engineering department and aggregation switch</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-d91b36539a60403290cba5d33e9312af" source="id-736e644d31894b3ea124e55287a178ac" target="id-b1575a25b8434af7a44ac31d2a488c40">
+      <documentation>communication link between frontdesk and aggregation switch</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-8513d946dc7b4abb8b0764786f9e1baa" source="id-2c66f501ea3d4edcb470173d4e2bdf43" target="id-b1575a25b8434af7a44ac31d2a488c40">
+      <documentation>communication link between server and aggregation switch</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-6e420fd9648a41f4be6b32088592669f" source="id-70b4b23d361c444aa6537926d8538d23" target="id-61dcfb01be9d4ec9ae5e4300369f7a7e">
+      <documentation>The result of judgment will be sent from MainFrame Computer to Card Switch.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-ae0a27a49731444dafb9991de1164c07" source="id-2ab2db0ee41749d0a7d8a2b0905a6f3e" target="id-6540c046620d4f609afdc3ba0526d0c3">
+      <documentation>The data in employee database will be backed up in the Employee Backup Database.
+</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-37cd595b9fb84b1a9eaa9c4b0f9131c4" source="id-741f912de81442b488b8a6d1e8610210" target="id-6c6bffaaf979457994320b7935d92965">
+      <documentation>the link connects the IAD to the hotel LAN</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-b2ff3f9066144b6fb136cbe4299d6940" source="id-53a541184e6d495a89dd807c24ebbd9f" target="id-e4ccd0eee4ea4fe9b78bc387d9311e6b">
+      <documentation>Collected data will be sent and stored in the database.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-f6cf49c607d040b7968f6a3f50b7647d" source="id-e4ccd0eee4ea4fe9b78bc387d9311e6b" target="id-cceb7a9aa1424b5d9fcf92298bef98b0">
+      <documentation>Relevant data is passed to preprocessor software to be normalized.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-ec0bf349a7fe45d1b2ac888f29d491dc" source="id-cceb7a9aa1424b5d9fcf92298bef98b0" target="id-a21bc41664294221b08373ae014e2aa3">
+      <documentation>the data after being preprocessed will be passed to analyzer
+</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-c1458cc4ac2948c191041c0e8c1dbc62" source="id-a21bc41664294221b08373ae014e2aa3" target="id-278ca6b0b62d4220a76ada8c7515d445">
+      <documentation>The result from analysing the marketing data will be sent to report generator </documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-4b9eb6d8acbd4ac499cdac88cd15b4e2" source="id-cceb7a9aa1424b5d9fcf92298bef98b0" target="id-47d08fad7e674f4aa6295f8c5e18059d">
+      <documentation>required data for training the preiction model will be sent from data processor to marketing prediction app.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-18658e8238604b1a9ac0fac5c29db29a" source="id-b5e0989be21a4588884bddad97ff4986" target="id-88f802f003874255ab8be186055f3136"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-a37bc1aa7af44f0b87123c59a6e6d9a0" source="id-b5e0989be21a4588884bddad97ff4986" target="id-8bd56409f8ee4f8f91098552cd88da60"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-02a87c0f0ac345d6a132f9edeac1b81c" source="id-3b55e8a7bcef41709643d442894d3a70" target="id-88f802f003874255ab8be186055f3136"/>
+    <element xsi:type="archimate:AssociationRelationship" id="id-6e06dcd390ce42ebbc01d8f4193c9c01" source="id-ac88ee58519244578fb314d3ea1468cc" target="id-d0794b2775544b0cbb702d3d3064e845">
+      <documentation>As a part of the front-end equipment, the POS is connected to the switch to exchange data with the back-end equipment.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-352a8a76b5b3468a8413ee5ed72f9dff" source="id-ac88ee58519244578fb314d3ea1468cc" target="id-d601cc508d3a4dada3bb7a85eb41817a">
+      <documentation>As a part of the front-end equipment, the cash register is connected to the switch to exchange data with the back-end equipment.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-62507095df9e4abab350358a5bc54354" source="id-d3b7999e1a8a4ff298b995d9d4385bb1" target="id-ac88ee58519244578fb314d3ea1468cc">
+      <documentation>The PC in the foreground exchanges data with the background through the connection with the switch.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-a17d5fdcbf6e4571ab95ffc9b4072427" source="id-d3b7999e1a8a4ff298b995d9d4385bb1" target="id-7a922d8771524390bac64355ed674a25">
+      <documentation>The printer is controlled by the front desk staff through their PC.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-c98d431af2c647a28149fd92b4ea8603" source="id-ac88ee58519244578fb314d3ea1468cc" target="id-2b02e773d11d417f8dde01c5393b3cd0">
+      <documentation>the central device among the back-end is connected to the switch that connects all the front-end devices</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-cb849e5388de4f88826bc4ddb1a1f0a4" source="id-634d1251ccac41ae96b15a9abc8a4a5e" target="id-2b02e773d11d417f8dde01c5393b3cd0">
+      <documentation>data link between manager's PC and mainframe server</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-b368c9e1ac7541febf694f0db5364e61" source="id-c330326c65cb48e3bdabad902af18982" target="id-2b02e773d11d417f8dde01c5393b3cd0">
+      <documentation>The work of the mainframe server may require obtaining data from the data server.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-a3b616d39aea45139089b5261e8e47e3" source="id-6f2d70731cd74e70a0a6aabd92a404bd" target="id-17b8ba94065f4cba842eb0fc3f9ebbb4">
+      <documentation>The interface sends a request to change the inventory to the management software.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-c0068cd084254a29924354165b0fcea7" source="id-17b8ba94065f4cba842eb0fc3f9ebbb4" target="id-4b7b3bbbbfe24912a87ee5f9a1e6627b">
+      <documentation>The interface sends a request to change the inventory to the management software.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-f0f007fd8fe248c4a3fedc230263c83e" source="id-08adb6b187a64be994fbc5c282fdda95" target="id-17b8ba94065f4cba842eb0fc3f9ebbb4">
+      <documentation>data flow between database and inventory management software</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-5fe969d5e3c942ff8b40313b69f20c08" source="id-d78d8b46e6914c66a6ce67ad241d6ab7" target="id-08adb6b187a64be994fbc5c282fdda95">
+      <documentation>Data flow between inventory database and inventory query software.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-2b05e61f5f2d4006b9833b7192adb9ed" source="id-08adb6b187a64be994fbc5c282fdda95" target="id-e2b67db7183345f9b71db634d2f6f40b">
+      <documentation>Relevant data needed to count inventory</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-07ce0de0788e457b8b0382e6a614a717" source="id-e2b67db7183345f9b71db634d2f6f40b" target="id-a87ba0dc398b426a9195431d4761db8e">
+      <documentation>Send the inventory count status to the demand analysis software.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-3ea54ce1ac204cfab32941926158d148" source="id-7a3a80e2e3464c5aa56c8657b5ccd17d" target="id-0c5bd7784c0143e9b2dab8b29856ea4f">
+      <documentation>If an abnormality is detected, a signal will be sent from the detector to the switch.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-657264f63a2947859172dd9094cc0b88" source="id-11dbdae5f0e34f529aea64155d9c7744" target="id-0c5bd7784c0143e9b2dab8b29856ea4f">
+      <documentation>If an abnormality is detected, a signal will be sent from the detector to the switch.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-5bc434d91946403f9f9000f64d90143b" source="id-0c5bd7784c0143e9b2dab8b29856ea4f" target="id-cb03e61c214749f7b84c29f18152aa08">
+      <documentation>The switch that centralizes the hotel's peripheral alarm and detection equipment is connected to the hotel's control host through a data link.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-6476e9eb93144b0286fd2df346d5a94d" source="id-cb03e61c214749f7b84c29f18152aa08" target="id-8f3b0479126d48c7981fa1ee3ee28ac8">
+      <documentation>The signals that instructs the relevant fire fighting devices to work.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-28f866d7a4284c7186e840d49dc234b5" source="id-8f3b0479126d48c7981fa1ee3ee28ac8" target="id-663a8aa3fa5a47a08e82eea6e5a25f7f">
+      <documentation>control signal</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-1a3eb98996e741b79bc834d42efbb41d" source="id-8f3b0479126d48c7981fa1ee3ee28ac8" target="id-185895e806304033ad2a47f012f782ab">
+      <documentation>control signal
+</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-02ebde09c9ff47c391d418f7e9a5ec8b" source="id-8f3b0479126d48c7981fa1ee3ee28ac8" target="id-08a11f69f27d4e5083f0675e173a9edb">
+      <documentation>control signal</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-017432afbc5c4b5291434902d2bb76d2" source="id-8f3b0479126d48c7981fa1ee3ee28ac8" target="id-d1f34f38b2144cab887ee25e74336a4b">
+      <documentation>control signal</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-add483fae7024889af0fd9f46140232a" source="id-0c5bd7784c0143e9b2dab8b29856ea4f" target="id-326c26bb47824793a9d1ae8779ba0468">
+      <documentation>Multiple alarms are connected by siwtch, it can reacts to the control signal from control server or from detectors.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-8be7a26c3dcc483b851b790ba422ee9a" source="id-d286136f5769404fa2df94d925b91cdb" target="id-0c5bd7784c0143e9b2dab8b29856ea4f">
+      <documentation>When someone uses the telephone, it will also reports the information to the hotel control server by first send it to switch.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-284e39cd4b11421a83f70a199da18372" source="id-1b04144d84b14f03a406dd841e45fad8" target="id-74d81e0841d540639698cb9b8d7b326c">
+      <documentation>The Room Card Reset is an application service provided to the check out software.</documentation>
+    </element>
+    <element xsi:type="archimate:AssociationRelationship" id="id-0e5988eaecf649fb959529fa7b91e902" source="id-bc4ed60c448e4505be41d427dad712b3" target="id-a0c7ec2deb3843ae9cab083eeb2113de">
+      <documentation>Data of customer consumption history</documentation>
+    </element>
+  </folder>
+  <folder name="Views" id="id-b8c6e2b88ab8471ba8896d73ad46b405" type="diagrams">
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Online Booking" id="id-3fd1ea88a6c9461a8d913e584ec1ad5d" viewpoint="application_usage">
+      <child xsi:type="archimate:DiagramObject" id="id-323f6f1f9f7a46de8f15860439b4de8b" archimateElement="id-a4a10f6dd9e0447998bd9b6ea46f9b0b">
+        <bounds x="408" y="144" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-35dd5e9730354f399166869708fbaeb1" source="id-323f6f1f9f7a46de8f15860439b4de8b" target="id-649adbaf51de48eaa0ae830b6a301848" archimateRelationship="id-36878e99f7834f2f994c4ebccdcf9173"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-c9fb171fc6c74cc1867e48813812e58b" source="id-323f6f1f9f7a46de8f15860439b4de8b" target="id-74fa216f2b044a669ca364e3f203d819" archimateRelationship="id-f68e2406ca87454aa3f84171b77182cb"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-6c3ee982d19045ceaa6e9ea818cd5947" targetConnections="id-959ff38fd9204ef49ad1117d27550ac9" archimateElement="id-4d4e4993db3e45bd9f0e07dc7cacd8f5">
+        <bounds x="408" y="312" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-41dae72e188848df822c1567f6f8bcc3" source="id-6c3ee982d19045ceaa6e9ea818cd5947" target="id-649adbaf51de48eaa0ae830b6a301848" archimateRelationship="id-fc9bd3d9a66d4e18ab85e384bf5b2ac0"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-649adbaf51de48eaa0ae830b6a301848" targetConnections="id-35dd5e9730354f399166869708fbaeb1 id-41dae72e188848df822c1567f6f8bcc3" archimateElement="id-0bfd3dfcb19d41358176d1182e832755">
+        <bounds x="588" y="228" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-c9b6447f910e4d8a8286db0419086466" source="id-649adbaf51de48eaa0ae830b6a301848" target="id-265848d6e01c4ee692c3dea52776f73e" archimateRelationship="id-db6ed0ea4f1249049f28133462970dd9"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-74fa216f2b044a669ca364e3f203d819" targetConnections="id-c9fb171fc6c74cc1867e48813812e58b" archimateElement="id-7908f0d211894afcae5997d2b381e745">
+        <bounds x="228" y="228" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-d0320926c70b4540a595017965fb2ddb" source="id-74fa216f2b044a669ca364e3f203d819" target="id-1dc0428cb35b45ab80362bf667903151" archimateRelationship="id-777a979919d2461e830ba3e14349b267"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-959ff38fd9204ef49ad1117d27550ac9" source="id-74fa216f2b044a669ca364e3f203d819" target="id-6c3ee982d19045ceaa6e9ea818cd5947" archimateRelationship="id-407ed77b63a94d66b05f20f18c6635bf"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-1dc0428cb35b45ab80362bf667903151" targetConnections="id-d0320926c70b4540a595017965fb2ddb" archimateElement="id-bcb0cebcb4fe4ed193dfa36ba53dd13c">
+        <bounds x="48" y="228" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-265848d6e01c4ee692c3dea52776f73e" targetConnections="id-c9b6447f910e4d8a8286db0419086466" archimateElement="id-cffe169993a147518f9b6438fb4337d2">
+        <bounds x="768" y="228" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:Group" id="id-e60c3f92253647899c86a598e6473dd3" name="Multiple Software Platforms for Booking" textAlignment="1" alpha="55">
+        <bounds x="372" y="72" width="205" height="373"/>
+      </child>
+      <documentation>This view shows the customers want to book a room from mobile application or on the booking website.</documentation>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Marketing Strategy Assistance" id="id-b2c5f3aa75c5463bb640169153781b47" viewpoint="application_usage">
+      <child xsi:type="archimate:DiagramObject" id="id-dd8f36eae0be4d3db3d96ed8f437b5f8" targetConnections="id-811700a074044852acc13b75abb9a4e3" archimateElement="id-e4ccd0eee4ea4fe9b78bc387d9311e6b">
+        <bounds x="252" y="120" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-76869d50246b40b6932f2edd2522c84e" source="id-dd8f36eae0be4d3db3d96ed8f437b5f8" target="id-f669948c46344c37b1e14e5be300c845" archimateRelationship="id-f6cf49c607d040b7968f6a3f50b7647d"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-76f546da7e564255a6dd30098db5cfd1" targetConnections="id-90bb6283f5194e60ab85fbd7fd5a6722" archimateElement="id-a21bc41664294221b08373ae014e2aa3">
+        <bounds x="480" y="300" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-7343d205ed4c4b8c87745dc8c5610ed2" source="id-76f546da7e564255a6dd30098db5cfd1" target="id-5e25cc440c7446e48fdafc8ced7e96f9" archimateRelationship="id-c1458cc4ac2948c191041c0e8c1dbc62"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-5e25cc440c7446e48fdafc8ced7e96f9" targetConnections="id-7343d205ed4c4b8c87745dc8c5610ed2" archimateElement="id-278ca6b0b62d4220a76ada8c7515d445">
+        <bounds x="684" y="300" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-35d49923f4564790a51f0b8320e72fc9" archimateElement="id-53a541184e6d495a89dd807c24ebbd9f">
+        <bounds x="480" y="120" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-811700a074044852acc13b75abb9a4e3" source="id-35d49923f4564790a51f0b8320e72fc9" target="id-dd8f36eae0be4d3db3d96ed8f437b5f8" archimateRelationship="id-b2ff3f9066144b6fb136cbe4299d6940"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-f669948c46344c37b1e14e5be300c845" targetConnections="id-76869d50246b40b6932f2edd2522c84e" archimateElement="id-cceb7a9aa1424b5d9fcf92298bef98b0">
+        <bounds x="252" y="300" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-90bb6283f5194e60ab85fbd7fd5a6722" source="id-f669948c46344c37b1e14e5be300c845" target="id-76f546da7e564255a6dd30098db5cfd1" archimateRelationship="id-ec0bf349a7fe45d1b2ac888f29d491dc"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-8da9e9b4818847b48b0f42048c5abf56" source="id-f669948c46344c37b1e14e5be300c845" target="id-d577321e340a4289928f99be7de7bef5" archimateRelationship="id-4b9eb6d8acbd4ac499cdac88cd15b4e2"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-d577321e340a4289928f99be7de7bef5" targetConnections="id-8da9e9b4818847b48b0f42048c5abf56" archimateElement="id-47d08fad7e674f4aa6295f8c5e18059d">
+        <bounds x="36" y="273" width="169" height="109"/>
+        <child xsi:type="archimate:DiagramObject" id="id-dc22b2fba46a4a98b74d476f74269da6" archimateElement="id-a27893d5f698411ca01da593ecc2196a">
+          <bounds x="12" y="48" width="145" height="49"/>
+        </child>
+      </child>
+      <documentation>This is to provide visualize report for marketing manager based on the room occupancy rate, occupancy time rate, price, etc.</documentation>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Parking Management Equipment" id="id-cbe8781fcf2c40f19c2ad3a211dcef1b" viewpoint="physical">
+      <child xsi:type="archimate:DiagramObject" id="id-f5d727bc37d84dd19b07605b6795b498" targetConnections="id-50b4a5716a44450895105b2c5fab37fa" archimateElement="id-630990e8b40942768235f81101232170">
+        <bounds x="168" y="60" width="151" height="89"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-914e7f4fc79748a7940cbb106b06702e" targetConnections="id-234f7a05d8004b59888924a03e76f8dc" archimateElement="id-25b3c5ee77154edaa9be872a84758403">
+        <bounds x="516" y="84" width="146" height="83"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-6ca15fcb225240979e9de0e7be7203f4" archimateElement="id-c9dc8ff0341f4eefb1af93240edb8642">
+        <bounds x="144" y="336" width="151" height="61"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-ad964ff16ed84da4878f2e79109c299b" source="id-6ca15fcb225240979e9de0e7be7203f4" target="id-cc2048fab87341358f686ed1eb0a7f52" archimateRelationship="id-0523656dfc984cb2973a68b0a6ada1d7"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-902a49ccdb4d4bd4843122027c083436" targetConnections="id-5485f570f14344099b16c4f2fd4196fe" archimateElement="id-703bd890877d4a0f9e46578893d89116">
+        <bounds x="540" y="348" width="156" height="61"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-cc2048fab87341358f686ed1eb0a7f52" targetConnections="id-ad964ff16ed84da4878f2e79109c299b" archimateElement="id-6c240b01f7f342b596b915d2a0cadb70">
+        <bounds x="360" y="211" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-50b4a5716a44450895105b2c5fab37fa" source="id-cc2048fab87341358f686ed1eb0a7f52" target="id-f5d727bc37d84dd19b07605b6795b498" archimateRelationship="id-9db404832d404796a597ecdb8aa1d56a"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-234f7a05d8004b59888924a03e76f8dc" source="id-cc2048fab87341358f686ed1eb0a7f52" target="id-914e7f4fc79748a7940cbb106b06702e" archimateRelationship="id-f8ee38d7931843839c231cc355c88777"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-5485f570f14344099b16c4f2fd4196fe" source="id-cc2048fab87341358f686ed1eb0a7f52" target="id-902a49ccdb4d4bd4843122027c083436" archimateRelationship="id-86446c1f3a4841d087b7f921c8c7248f"/>
+      </child>
+      <documentation>This is to show how the parking lot can be deployed with hardware to complete its management functions.
+</documentation>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Check Out" id="id-2c6cadbb319147dd8cbe78142d8bbf67" viewpoint="application_usage">
+      <child xsi:type="archimate:DiagramObject" id="id-dbdd055862924b9f9c0ede615e96f2f9" targetConnections="id-0482c77377d7452b9fe2d204735d9d2b" archimateElement="id-5c960591987f4b08983a9fbe1f782b53">
+        <bounds x="361" y="84" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-b9de7ef75a0e412ab680933d7053a505" source="id-dbdd055862924b9f9c0ede615e96f2f9" target="id-626a6b8fc54644a19f27bc0606a8e84d" archimateRelationship="id-ae3f49a7fef04388a54a81dab037d0c0"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-33b323eafbb14b2aa73265956bb09204" targetConnections="id-59c8be1155f04a7fa128e770ef71ca52" archimateElement="id-5cafaa091b6140429b1e90fa59d8e590">
+        <bounds x="361" y="384" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-9077dfa0a9c64669bbe7aef5e0a05336" source="id-33b323eafbb14b2aa73265956bb09204" target="id-d617092fa9504f7dbb36d0eea0b2da14" archimateRelationship="id-9bc634b18c5c4e54ba3aeb5235bf3336"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-d617092fa9504f7dbb36d0eea0b2da14" targetConnections="id-9077dfa0a9c64669bbe7aef5e0a05336" archimateElement="id-a95c74687ae9467ca06140963be774f8">
+        <bounds x="672" y="384" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-626a6b8fc54644a19f27bc0606a8e84d" targetConnections="id-b9de7ef75a0e412ab680933d7053a505" archimateElement="id-a1453505b21046ec9ce6c12ea6fdbffa">
+        <bounds x="672" y="84" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-03e57df811924c6b981d334f8aec283c" targetConnections="id-f5686e074983451db2b5fc2b70b43cfe" archimateElement="id-1b04144d84b14f03a406dd841e45fad8">
+        <bounds x="307" y="228" width="227" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-0482c77377d7452b9fe2d204735d9d2b" source="id-03e57df811924c6b981d334f8aec283c" target="id-dbdd055862924b9f9c0ede615e96f2f9" archimateRelationship="id-1279b4936c634af18145d6166c5ce58d"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-59c8be1155f04a7fa128e770ef71ca52" source="id-03e57df811924c6b981d334f8aec283c" target="id-33b323eafbb14b2aa73265956bb09204" archimateRelationship="id-242cf2369c5a4629bb71e432b1529217"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-606d60af43fe4868b05aeaa7af0a8b06" source="id-03e57df811924c6b981d334f8aec283c" target="id-211293907ff949a8b341e0407e7514ec" archimateRelationship="id-284e39cd4b11421a83f70a199da18372"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-ed3848b03af846f8a7aa3d15cb6b3bc8" archimateElement="id-c54da53c8ddf4bf5935bbe4d9063672e">
+        <bounds x="84" y="228" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-f5686e074983451db2b5fc2b70b43cfe" source="id-ed3848b03af846f8a7aa3d15cb6b3bc8" target="id-03e57df811924c6b981d334f8aec283c" archimateRelationship="id-b4dff72ab39446b58e9dc8dedf0a83be"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-211293907ff949a8b341e0407e7514ec" targetConnections="id-606d60af43fe4868b05aeaa7af0a8b06" archimateElement="id-74d81e0841d540639698cb9b8d7b326c">
+        <bounds x="672" y="216" width="120" height="55"/>
+      </child>
+      <documentation>Describes the collaboration and process between the software for the customer to check out of the hotel.</documentation>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Customer Data" id="id-cdb4b01976d94a0886e7478490dda89a" viewpoint="application_usage">
+      <child xsi:type="archimate:DiagramObject" id="id-bec73ad1357b4a5588727996bea5cc57" targetConnections="id-70e8740c6d564174b678ba1fbd61a13d" archimateElement="id-bc4ed60c448e4505be41d427dad712b3">
+        <bounds x="313" y="170" width="183" height="71"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-5fac8ecaaa8a421da5f2acca5d997c7d" source="id-bec73ad1357b4a5588727996bea5cc57" target="id-89f97e30941d4fd88b0cc04006ad696c" archimateRelationship="id-558ac6f85ed345099244157c37acd57a"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-5834c32d998e4581ba2a2a39c5abe1e3" source="id-bec73ad1357b4a5588727996bea5cc57" target="id-cf2b4f4d3d104024b7715b0a0150e82d" archimateRelationship="id-324aba75d80c414297fe2e4ba13e0138"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-833997c71528410ab1bc6e2b0963d799" source="id-bec73ad1357b4a5588727996bea5cc57" target="id-c01ecc7240cf45e5aa9ba5e3c718c14c" archimateRelationship="id-0e5988eaecf649fb959529fa7b91e902"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-89f97e30941d4fd88b0cc04006ad696c" targetConnections="id-5fac8ecaaa8a421da5f2acca5d997c7d" archimateElement="id-146e8f8f6b914653a3ddeef868fb2a93">
+        <bounds x="612" y="178" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-b461dee85fae4c2589f0e6270f0c706c" archimateElement="id-19074d406a8d43aabc9dad139cdf12c3">
+        <bounds x="96" y="178" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-70e8740c6d564174b678ba1fbd61a13d" source="id-b461dee85fae4c2589f0e6270f0c706c" target="id-bec73ad1357b4a5588727996bea5cc57" archimateRelationship="id-b6f036c094f64e118776a29b753017fa"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-cf2b4f4d3d104024b7715b0a0150e82d" targetConnections="id-5834c32d998e4581ba2a2a39c5abe1e3" archimateElement="id-5ea2e0b5ebe846a49b0664b6b56e082b">
+        <bounds x="312" y="300" width="185" height="133"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-7b3faccf5f6c4ddc956a98944203b87c" source="id-cf2b4f4d3d104024b7715b0a0150e82d" target="id-9d643084dc044f03bb304a4d9890b081" archimateRelationship="id-35dc158f25b244ef98755deb3ad8c17a"/>
+        <child xsi:type="archimate:DiagramObject" id="id-9d643084dc044f03bb304a4d9890b081" targetConnections="id-7b3faccf5f6c4ddc956a98944203b87c" archimateElement="id-132bd3e6bbda47438c9ae8d6d4598423">
+          <bounds x="24" y="60" width="145" height="49"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-c01ecc7240cf45e5aa9ba5e3c718c14c" targetConnections="id-833997c71528410ab1bc6e2b0963d799" archimateElement="id-a0c7ec2deb3843ae9cab083eeb2113de">
+        <bounds x="328" y="72" width="154" height="62"/>
+      </child>
+      <documentation>Store and manage customers‘ information.</documentation>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Human Resource" id="id-a7c20d8d85c346a19742da2ea5bdd6f8" viewpoint="application_usage">
+      <child xsi:type="archimate:DiagramObject" id="id-2914ee385bed4fdaad15f2622136a637" archimateElement="id-18a8cb7994d4448486d5d521d18bf8b4">
+        <bounds x="60" y="144" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-6e0c3d22d1dd4deaab5fd18be4ad7e90" source="id-2914ee385bed4fdaad15f2622136a637" target="id-0a6fe2c574d94ff5822087f5e016390f" archimateRelationship="id-d596f9212e604858a6adf7ba44872a80"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-2beb6ada22554fc88cef2d2ec17dff11" source="id-2914ee385bed4fdaad15f2622136a637" target="id-a71e8f64d26d4230b1ea30bd3fb50692" archimateRelationship="id-dd8d441b872c4fb3bafb65373c0bdba0">
+          <bendpoint startY="302" endX="-385" endY="9"/>
+        </sourceConnection>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-0a6fe2c574d94ff5822087f5e016390f" targetConnections="id-6e0c3d22d1dd4deaab5fd18be4ad7e90" archimateElement="id-6b26467e24db4e458ebfa4f82c580277">
+        <bounds x="240" y="144" width="120" height="70"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-26704390540644b290fc105d2c997790" source="id-0a6fe2c574d94ff5822087f5e016390f" target="id-233ba2c812344063a03f82c53a4a8a6b" archimateRelationship="id-ba08b3ab4a854a1093b11c16978de171"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-3bf6038e788b46489844e1b1f884776b" archimateElement="id-42a2cfd6d2714d619350d2b03b4dd7e7">
+        <bounds x="444" y="144" width="121" height="70"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-8644e3f40a084175873c70d66c11a495" source="id-3bf6038e788b46489844e1b1f884776b" target="id-233ba2c812344063a03f82c53a4a8a6b" archimateRelationship="id-40fe63c1d6d349a69bed4eb2e12fda50"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-233ba2c812344063a03f82c53a4a8a6b" targetConnections="id-26704390540644b290fc105d2c997790 id-8644e3f40a084175873c70d66c11a495" archimateElement="id-2ab2db0ee41749d0a7d8a2b0905a6f3e">
+        <bounds x="240" y="264" width="325" height="49"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-809e35a2453d4648badfff648cd89155" source="id-233ba2c812344063a03f82c53a4a8a6b" target="id-aaffa35fb01e4f3db0fe49d09a27a816" archimateRelationship="id-755c2d4713464b2ca8f4c048762f221a"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-654fb45f22ef452ca768ca8ef100a06e" source="id-233ba2c812344063a03f82c53a4a8a6b" target="id-a71e8f64d26d4230b1ea30bd3fb50692" archimateRelationship="id-b2d502a9dc7f4269a44b2beea67db279"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-ccc0f42fbf3b4fd0b14c5200bf78038d" source="id-233ba2c812344063a03f82c53a4a8a6b" target="id-61b7c8c240884c2bb53efcf3d5384150" archimateRelationship="id-ae0a27a49731444dafb9991de1164c07"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-aaffa35fb01e4f3db0fe49d09a27a816" targetConnections="id-809e35a2453d4648badfff648cd89155" archimateElement="id-4f5f4ee47d234c399f8bf6e6c05eb991">
+        <bounds x="240" y="360" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-a71e8f64d26d4230b1ea30bd3fb50692" targetConnections="id-654fb45f22ef452ca768ca8ef100a06e id-2beb6ada22554fc88cef2d2ec17dff11" archimateElement="id-c784025d5b724e0689b0247cff5d8c9b">
+        <bounds x="445" y="444" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-e9643c043ff44b51b28c01b02c09dc25" source="id-a71e8f64d26d4230b1ea30bd3fb50692" target="id-a7daa48b560541ae882f2b97da4cc84e" archimateRelationship="id-116a4513c0584a73b1f09779e2690109"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-a7daa48b560541ae882f2b97da4cc84e" targetConnections="id-e9643c043ff44b51b28c01b02c09dc25" archimateElement="id-c4a9b4ebb2b7435fb10253ee66253f87">
+        <bounds x="672" y="444" width="133" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-61b7c8c240884c2bb53efcf3d5384150" targetConnections="id-ccc0f42fbf3b4fd0b14c5200bf78038d" archimateElement="id-6540c046620d4f609afdc3ba0526d0c3">
+        <bounds x="679" y="261" width="120" height="55"/>
+      </child>
+      <documentation>Managing employee information includes arranging employee’ working hours and positions.</documentation>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Restaurant Service" id="id-e6da43a24b2f444083fe68a90903129b" viewpoint="application_usage">
+      <child xsi:type="archimate:DiagramObject" id="id-9650c69afaf846229a32e0217ec213e7" archimateElement="id-2d3fe1548ed74758bf8862b64377de77">
+        <bounds x="241" y="162" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-e8656ed251dc41eab61e4f72dce931ce" source="id-9650c69afaf846229a32e0217ec213e7" target="id-f50a208df8324523a914e6e37a728039" archimateRelationship="id-75bce34171f94719beee5f4d43851c5a"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-0c2f3222f82543388a5cde0e80835383" source="id-9650c69afaf846229a32e0217ec213e7" target="id-04659011782447c6862bc27659d67a21" archimateRelationship="id-c923914a82934b7f82b43940ee9e158e"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-2b851cf9aba748358fa65d2eb1c31f57" source="id-9650c69afaf846229a32e0217ec213e7" target="id-6343755b7c2a49f8a30c5911317df7d5" archimateRelationship="id-8e77da451b074e40be04cc3b26a9bb5d"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-f50a208df8324523a914e6e37a728039" targetConnections="id-e8656ed251dc41eab61e4f72dce931ce" archimateElement="id-4c525c01457643388af313337a277534">
+        <bounds x="36" y="168" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-04659011782447c6862bc27659d67a21" targetConnections="id-0c2f3222f82543388a5cde0e80835383" archimateElement="id-7cf7954b29df421b919850bab63c1e63">
+        <bounds x="564" y="162" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-2a8d4ba763b641a9a316fa03b348e8c7" source="id-04659011782447c6862bc27659d67a21" target="id-e16e673ae6444201b33f2e2350b0b789" archimateRelationship="id-bcda5ba6ee6641858676de4515856d51"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-6343755b7c2a49f8a30c5911317df7d5" targetConnections="id-1cd468c18c4b4f2f8f046bee98eae88f id-2b851cf9aba748358fa65d2eb1c31f57" archimateElement="id-16753321ffa84e16b7cc55a681525fdb">
+        <bounds x="234" y="288" width="133" height="61"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-d4d09ae84ffa4be9b407b05a974bbb68" source="id-6343755b7c2a49f8a30c5911317df7d5" target="id-f2f642f2c5c34ababf21215eb5488df2" archimateRelationship="id-0679fe67ddf44de1b3d2f1606aad521b"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-e16e673ae6444201b33f2e2350b0b789" targetConnections="id-2a8d4ba763b641a9a316fa03b348e8c7" archimateElement="id-e97116cf64114b3684f11fba7ddf1e7e">
+        <bounds x="557" y="291" width="133" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-1cd468c18c4b4f2f8f046bee98eae88f" source="id-e16e673ae6444201b33f2e2350b0b789" target="id-6343755b7c2a49f8a30c5911317df7d5" archimateRelationship="id-76488f10176240cc87d1165e23aeb501"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-f2f642f2c5c34ababf21215eb5488df2" targetConnections="id-d4d09ae84ffa4be9b407b05a974bbb68" archimateElement="id-3077f1784e384f30841af63b0b4e14a7">
+        <bounds x="241" y="432" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-3079812c7408429c8cbc2dfa7e5592f0" source="id-f2f642f2c5c34ababf21215eb5488df2" target="id-2fbd5cbf13c9427f93fb0498464c1234" archimateRelationship="id-4a8cdec0181b40d8b6cd466868433319"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-2fbd5cbf13c9427f93fb0498464c1234" targetConnections="id-3079812c7408429c8cbc2dfa7e5592f0" archimateElement="id-326ebdefe11f4c7bb989d90926de51da">
+        <bounds x="554" y="432" width="140" height="56"/>
+      </child>
+      <child xsi:type="archimate:Group" id="id-ce428b9fb7f04149ae5f2118d1ab02f9" name="Customer's View" textAlignment="1" alpha="55">
+        <bounds x="216" y="132" width="505" height="109"/>
+      </child>
+      <child xsi:type="archimate:Group" id="id-a9826bbc95f448448a757cdbdb097ff1" name="Behind Process" textAlignment="1" alpha="55">
+        <bounds x="216" y="264" width="505" height="241"/>
+      </child>
+      <documentation>Represents the process from the client’s order request to the kitchen to get instructions.</documentation>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Check In" id="id-ee79168a63ee4a148c87069d4dd58fa3" viewpoint="application_usage">
+      <child xsi:type="archimate:DiagramObject" id="id-7d8f4b146c444b28a8e0e9b943656948" archimateElement="id-21f6cc4dfdbe45f393ff143c3f392193">
+        <bounds x="84" y="240" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-ff0788596753456d80e1bb9e6e5b7a4d" source="id-7d8f4b146c444b28a8e0e9b943656948" target="id-aba5cb9a52a04f42a0669fca5889b9b5" archimateRelationship="id-dfca67a3cb844302807ae11fb69796b7"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-aba5cb9a52a04f42a0669fca5889b9b5" targetConnections="id-ff0788596753456d80e1bb9e6e5b7a4d" archimateElement="id-704e6b6ce068455fb9e0ad4227e0cb89">
+        <bounds x="263" y="240" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-d0633f00cfc9415c9ab8e36b26f982b0" source="id-aba5cb9a52a04f42a0669fca5889b9b5" target="id-10bfbb460e4540c4ab939c1d009d6a2d" archimateRelationship="id-f4859dd256794157a840a25fd7a9a3ca"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-bf40099561fa4ca59e75ef22c3658ef6" source="id-aba5cb9a52a04f42a0669fca5889b9b5" target="id-6bf4a03f28cd443cac61f05c8c6b1821" archimateRelationship="id-f626a5ee96dd427584468b1d3729784e"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-0a1c7232e14e480da247af35020967fc" source="id-aba5cb9a52a04f42a0669fca5889b9b5" target="id-09ed33894cf549949c73d68769fd867c" archimateRelationship="id-88a2fc1dea0f4a529f6712866c08b8d8"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-10bfbb460e4540c4ab939c1d009d6a2d" targetConnections="id-d0633f00cfc9415c9ab8e36b26f982b0" archimateElement="id-1e004a322df9418d8635ee25865a1d91">
+        <bounds x="468" y="408" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-db479c9109ea45ae9ab550af388efc63" source="id-10bfbb460e4540c4ab939c1d009d6a2d" target="id-c33c4e1657384a7ab2d01fd7cb42c0d0" archimateRelationship="id-937e9682b4614e6fae961e0453cbb6d7"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-c33c4e1657384a7ab2d01fd7cb42c0d0" targetConnections="id-db479c9109ea45ae9ab550af388efc63 id-186bfc7cc50a4298bc55538c7aa37115 id-ab4de234f1864fcb91e28ae380b66949" archimateElement="id-a13a1438703842fcb865474bebcc0acc">
+        <bounds x="672" y="228" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-09ed33894cf549949c73d68769fd867c" targetConnections="id-0a1c7232e14e480da247af35020967fc" archimateElement="id-56f601dc36774e73a6e0dd2670ca9adf">
+        <bounds x="468" y="72" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-186bfc7cc50a4298bc55538c7aa37115" source="id-09ed33894cf549949c73d68769fd867c" target="id-c33c4e1657384a7ab2d01fd7cb42c0d0" archimateRelationship="id-b80a8d58409e43b3a5e796dff1136846"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-6bf4a03f28cd443cac61f05c8c6b1821" targetConnections="id-bf40099561fa4ca59e75ef22c3658ef6" archimateElement="id-60c26f1795ad4e96a4362f2f0dbb9232">
+        <bounds x="468" y="228" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-ab4de234f1864fcb91e28ae380b66949" source="id-6bf4a03f28cd443cac61f05c8c6b1821" target="id-c33c4e1657384a7ab2d01fd7cb42c0d0" archimateRelationship="id-9a197036e747477f99977f3dd79df09a"/>
+      </child>
+      <documentation>Demonstrates the flow of software collaboration at customer check-in.</documentation>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Intelligent Power Supply" id="id-ca74e4f74e594bf688e0c76b273baf8d" viewpoint="physical">
+      <child xsi:type="archimate:DiagramObject" id="id-5697875116104bd0ba4922770699437d" archimateElement="id-d644a2181345460887a92217052d6c12">
+        <bounds x="540" y="360" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-3abce6bb72424af58726489aa5ab29f0" source="id-5697875116104bd0ba4922770699437d" target="id-114cfa992889477884bf7ec3c4f74264" archimateRelationship="id-aa17f162471547b9b8c04a27523a9930"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-eea92d93b39f4603a697e2f7b1a3915a" targetConnections="id-d0204ba8c46d4465b4a443e544db86c9" archimateElement="id-fbba322c0d2d45a69bfc3cea3ce2194a">
+        <bounds x="552" y="132" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-2ffc68efdad24c6c8b346d03af846b95" targetConnections="id-511c1e9731a54786b40ec5618543ff2e" archimateElement="id-cb4e7d13faca4c6f93f584f3379e016c">
+        <bounds x="756" y="230" width="133" height="67"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-114cfa992889477884bf7ec3c4f74264" targetConnections="id-3abce6bb72424af58726489aa5ab29f0 id-cb53a35b54f34d1f8e1319f2a794cce3" archimateElement="id-3ed60f7b30864511a28525b5240ced03">
+        <bounds x="540" y="242" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-d0204ba8c46d4465b4a443e544db86c9" source="id-114cfa992889477884bf7ec3c4f74264" target="id-eea92d93b39f4603a697e2f7b1a3915a" archimateRelationship="id-030a96391ebf4155ae72cd4b16aad06a"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-511c1e9731a54786b40ec5618543ff2e" source="id-114cfa992889477884bf7ec3c4f74264" target="id-2ffc68efdad24c6c8b346d03af846b95" archimateRelationship="id-0343e6dac31c482c9df27443f893c1c4"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-92d3db941b2f409a86b19e0e9dcda338" archimateElement="id-ea86c197f9f54047b0d0bdc9e51955c5">
+        <bounds x="276" y="379" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-fb258500d7d2485ea058e1c384f2c46f" source="id-92d3db941b2f409a86b19e0e9dcda338" target="id-9453484363cd4b21b9195b82a4c1dd4e" archimateRelationship="id-0628648c11b342f6bf9657b40e0c4e03"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-9453484363cd4b21b9195b82a4c1dd4e" targetConnections="id-fb258500d7d2485ea058e1c384f2c46f id-a6916cfbafa549ca91fc2d34f62476b5" archimateElement="id-70b4b23d361c444aa6537926d8538d23">
+        <bounds x="288" y="242" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-cb53a35b54f34d1f8e1319f2a794cce3" source="id-9453484363cd4b21b9195b82a4c1dd4e" target="id-114cfa992889477884bf7ec3c4f74264" archimateRelationship="id-c79693517db84951a8aa18659ab27365"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-7340e2cc8301479280aab4003567cb8a" source="id-9453484363cd4b21b9195b82a4c1dd4e" target="id-5a1e5c7a53e541de96002156e0886cc6" archimateRelationship="id-6e420fd9648a41f4be6b32088592669f"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-71d499d6e7e144d6b2887390e8f8b41f" archimateElement="id-6cd82c75e6e042e38f467935223e4e21">
+        <bounds x="276" y="120" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-a6916cfbafa549ca91fc2d34f62476b5" source="id-71d499d6e7e144d6b2887390e8f8b41f" target="id-9453484363cd4b21b9195b82a4c1dd4e" archimateRelationship="id-6d095a2e58054de9909842ac65bac91e"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-fa8ec84ce35d46aa80909c18dbcc687d" source="id-71d499d6e7e144d6b2887390e8f8b41f" target="id-5a1e5c7a53e541de96002156e0886cc6" archimateRelationship="id-f5297d5ef58149fea42e7302c283a5ca"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-5a1e5c7a53e541de96002156e0886cc6" targetConnections="id-fa8ec84ce35d46aa80909c18dbcc687d id-7340e2cc8301479280aab4003567cb8a" archimateElement="id-61dcfb01be9d4ec9ae5e4300369f7a7e">
+        <bounds x="48" y="236" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:Group" id="id-36e6eef65ad6446eb917229a6d2d0b6b" name="Room Circuits" textAlignment="1" alpha="55">
+        <bounds x="492" y="94" width="409" height="340"/>
+      </child>
+      <documentation>It shows the equipment arrangement of each room to obtain power only after inserting the room card.</documentation>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Server Room" id="id-4b4ded56e35d441383445c49c57038f5" viewpoint="technology">
+      <child xsi:type="archimate:DiagramObject" id="id-183f26b944364be0848e8a35a55956d1" targetConnections="id-b170ffbecc76484eb1bc225aad435114" archimateElement="id-e049e9761d1342a9a222b2a0095ef2fa">
+        <bounds x="648" y="180" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-f50cb8cc5c7d4afbb8b1fbc621cd903e" targetConnections="id-fb0f9d47a25a493ea9f3fbff6aa79c1e" archimateElement="id-83dbc12c773d45e5a0b51b40013e5457">
+        <bounds x="672" y="300" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-94670bbcaa994595bd7178421f25ba30" archimateElement="id-2bea988f412e4f448a82895084ffe2aa">
+        <bounds x="480" y="432" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-27dbfd881ce34c17b18ac6b1f9499a85" source="id-94670bbcaa994595bd7178421f25ba30" target="id-d939389ebb2d4157bda53ccf4c974848" archimateRelationship="id-9173ae38cc884991a264c080cecfe368"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-d939389ebb2d4157bda53ccf4c974848" targetConnections="id-27dbfd881ce34c17b18ac6b1f9499a85" archimateElement="id-9dbf4df406ed46d9b4cb32ee954318d3">
+        <bounds x="480" y="300" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-fb0f9d47a25a493ea9f3fbff6aa79c1e" source="id-d939389ebb2d4157bda53ccf4c974848" target="id-f50cb8cc5c7d4afbb8b1fbc621cd903e" archimateRelationship="id-122ae9ac485e4cee947e91705c48ed08"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-44722fb22695447dae2ee325af89cd26" source="id-d939389ebb2d4157bda53ccf4c974848" target="id-7f57644bef754e73986088b8a95167a1" archimateRelationship="id-0787def34e3e4d30972787801aeaa655"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-7f57644bef754e73986088b8a95167a1" targetConnections="id-44722fb22695447dae2ee325af89cd26 id-5578b91afa8648a3b2a8628de82ca887 id-b6d9b12573e64606b48e85f8d168d721" archimateElement="id-3aea6d1b039c42d3b2f94dd3eff75b1e">
+        <bounds x="396" y="180" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-b170ffbecc76484eb1bc225aad435114" source="id-7f57644bef754e73986088b8a95167a1" target="id-183f26b944364be0848e8a35a55956d1" archimateRelationship="id-9623c985947c44b09d1ac2d7afb2fb23"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-089115799cef4db1853a490325761c39" source="id-7f57644bef754e73986088b8a95167a1" target="id-a098795013144eca813542d9352f6540" archimateRelationship="id-9ba2cea5bb0340619d3777bf2e3440a7"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-348d6f82f406496a9586dabfe779ac41" archimateElement="id-db7e843610b84b99b6c3f9d1cd4d1ff5">
+        <bounds x="156" y="180" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-5578b91afa8648a3b2a8628de82ca887" source="id-348d6f82f406496a9586dabfe779ac41" target="id-7f57644bef754e73986088b8a95167a1" archimateRelationship="id-f36d67305584404ea06dae464f35833e"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-3e4dce8f0a9a4258a09877cd738b3070" archimateElement="id-8cfd1dd8dbae4347b6ab012ce1eecc27">
+        <bounds x="396" y="48" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-b6d9b12573e64606b48e85f8d168d721" source="id-3e4dce8f0a9a4258a09877cd738b3070" target="id-7f57644bef754e73986088b8a95167a1" archimateRelationship="id-c355494adee447888464fe245b94a4f2"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-a098795013144eca813542d9352f6540" targetConnections="id-089115799cef4db1853a490325761c39" archimateElement="id-375e2221f5054aa3bda08c4e32de0448">
+        <bounds x="288" y="312" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-f6bec1c3b6aa4e19b9fa0d9a5f807e0b" source="id-a098795013144eca813542d9352f6540" target="id-a042dcfab06e441c8f57350eab4816e0" archimateRelationship="id-4e09c6764f7c464e8980cac7ecd3519b"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-a042dcfab06e441c8f57350eab4816e0" targetConnections="id-f6bec1c3b6aa4e19b9fa0d9a5f807e0b" archimateElement="id-0764b77678154950afeb93ebc4ddfed8">
+        <bounds x="275" y="432" width="120" height="55"/>
+      </child>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Monitoring System" id="id-2e64bf252de848ea98db18f79c0a7863" viewpoint="physical">
+      <child xsi:type="archimate:DiagramObject" id="id-e821e6a4b4034d548a4ab5d1a6a8fead" targetConnections="id-5fba1f67adf74deca01abece09154762" archimateElement="id-e8c8d4cc5aa74befa2ff91c139bcb1cd">
+        <bounds x="288" y="456" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-f6ef7a6d6a994044b59e467f8b502007" targetConnections="id-bceba44a7bfb48da996f12a6bb4cab0e" archimateElement="id-8c81b9b204db43778d34e5a7331b3ba2">
+        <bounds x="288" y="360" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-5fba1f67adf74deca01abece09154762" source="id-f6ef7a6d6a994044b59e467f8b502007" target="id-e821e6a4b4034d548a4ab5d1a6a8fead" archimateRelationship="id-81e172ee712541c899b1f4b44f3b20d8"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-bf55c18e05414854bed2d0718c889a7a" targetConnections="id-2b1554345cd545b093bc2cd40b212c81 id-1243b33aa2434d9c8f3848e7c26e4535 id-5fed019980f24f4bb422ad2e1bb0b2b9" archimateElement="id-1cb69a956926400fb5072747430b7686">
+        <bounds x="288" y="252" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-bceba44a7bfb48da996f12a6bb4cab0e" source="id-bf55c18e05414854bed2d0718c889a7a" target="id-f6ef7a6d6a994044b59e467f8b502007" archimateRelationship="id-b7702ae0bae844e5b8593257bf5b7d94"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-64c96ffb37b1429dbf0f228747689fd4" source="id-bf55c18e05414854bed2d0718c889a7a" target="id-56949709ae6e458fbe6616abfdfb486c" archimateRelationship="id-e5b945c742034511bd295f586ac9bdfe"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-a37f14cc1acc4d528345df8a01f654a9" archimateElement="id-bb0ea1ec560742da890de93d015dcc49">
+        <bounds x="456" y="115" width="146" height="65"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-2b1554345cd545b093bc2cd40b212c81" source="id-a37f14cc1acc4d528345df8a01f654a9" target="id-bf55c18e05414854bed2d0718c889a7a" archimateRelationship="id-edb1652dc4b243719992038ddf46cf1f"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-1cdedaf009184a51b3077c2606304d59" archimateElement="id-c470b5a83acb4452933021e4c2497824">
+        <bounds x="84" y="120" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-1243b33aa2434d9c8f3848e7c26e4535" source="id-1cdedaf009184a51b3077c2606304d59" target="id-bf55c18e05414854bed2d0718c889a7a" archimateRelationship="id-006fb75d93e1408b8711a9d8bd9829b2"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-0c47ae4ff71a466b9041ed0e478d268a" archimateElement="id-9492a0883536447eaa0eed8635a90a58">
+        <bounds x="36" y="252" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-5fed019980f24f4bb422ad2e1bb0b2b9" source="id-0c47ae4ff71a466b9041ed0e478d268a" target="id-bf55c18e05414854bed2d0718c889a7a" archimateRelationship="id-ae4f5505249547cfa626bbc20943edac"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-56949709ae6e458fbe6616abfdfb486c" targetConnections="id-64c96ffb37b1429dbf0f228747689fd4 id-cd52d3932095448bbef4bdcf0245bf89" archimateElement="id-a730c644bc964b4fb9fbc997d47c33e0">
+        <bounds x="564" y="240" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-371d9f1e8de04ed6b68b06d27cbe7eae" archimateElement="id-eae1dd4c2b0c47c2a692c2d628d7ed57">
+        <bounds x="564" y="353" width="151" height="69"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-cd52d3932095448bbef4bdcf0245bf89" source="id-371d9f1e8de04ed6b68b06d27cbe7eae" target="id-56949709ae6e458fbe6616abfdfb486c" archimateRelationship="id-c35d8d6cbba44c02ab6cefd2f3d1e9be"/>
+      </child>
+      <documentation>This view shows the technical layout of the hotel monitoring system.</documentation>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Communication Network" id="id-f22cba702c9744b98bddb05ccd824c46" viewpoint="physical">
+      <child xsi:type="archimate:DiagramObject" id="id-73c3fcb2885f4c29a5267a6e462ecadd" targetConnections="id-f27e734a00704eb8993bc6fc54338b9d" archimateElement="id-07883a60f9f6449c8bd081e3724f4e6a">
+        <bounds x="360" y="96" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-8d4db4195bb64b29b07c02de68b1e771" source="id-73c3fcb2885f4c29a5267a6e462ecadd" target="id-8198059a8c094433aed6392318da8d93" archimateRelationship="id-076fe0b3b20a4cd29bbcf1063a20ec22"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-8198059a8c094433aed6392318da8d93" targetConnections="id-8d4db4195bb64b29b07c02de68b1e771" archimateElement="id-868a80f043824368ae1fe25c143537a4">
+        <bounds x="552" y="96" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-23693c594da34b6aa6d67f814ffbae8e" targetConnections="id-9da016c1e5f3495ea7f512c97d39f76d" archimateElement="id-0bae3efbd57f4261a0e67f7a87ffb3b2">
+        <bounds x="360" y="342" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-ba2ccba0d3834231acd6b52bb4724d05" source="id-23693c594da34b6aa6d67f814ffbae8e" target="id-3094c6f770844721af30c6fc7a319fff" archimateRelationship="id-0552aa80ebf3400ea3f5fcf48fa6cb9d"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-6e684150aca74ef7bf76eff240b0cfce" targetConnections="id-369e4c8485a54aad90903837cbfc75ff" archimateElement="id-6c6bffaaf979457994320b7935d92965">
+        <bounds x="540" y="216" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-0e3665723a1449d19fdbfe8bdf8a0d79" source="id-6e684150aca74ef7bf76eff240b0cfce" target="id-2bab908493404e289c3f938a8b43babd" archimateRelationship="id-b5206c41f06544c3921603f2de51cef8"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-2bab908493404e289c3f938a8b43babd" targetConnections="id-0e3665723a1449d19fdbfe8bdf8a0d79" archimateElement="id-4818db762cb94213b6408560a5d5d730">
+        <bounds x="744" y="207" width="121" height="73"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-09360466560a4b19b84b36fbeeaa3a83" archimateElement="id-741f912de81442b488b8a6d1e8610210">
+        <bounds x="336" y="216" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-f27e734a00704eb8993bc6fc54338b9d" source="id-09360466560a4b19b84b36fbeeaa3a83" target="id-73c3fcb2885f4c29a5267a6e462ecadd" archimateRelationship="id-fdba97e8549443f3b4b1269045c468b9"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-9da016c1e5f3495ea7f512c97d39f76d" source="id-09360466560a4b19b84b36fbeeaa3a83" target="id-23693c594da34b6aa6d67f814ffbae8e" archimateRelationship="id-5b7cccc60ed5467493a2490a1f0d9ee6"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-1ae1a66b15c6493698237862a788a1f5" source="id-09360466560a4b19b84b36fbeeaa3a83" target="id-2e0aef1f627e4d03ae430a62c8982534" archimateRelationship="id-d82711ea4b2b49f7af3dbc3457f832a8"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-369e4c8485a54aad90903837cbfc75ff" source="id-09360466560a4b19b84b36fbeeaa3a83" target="id-6e684150aca74ef7bf76eff240b0cfce" archimateRelationship="id-37cd595b9fb84b1a9eaa9c4b0f9131c4"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-2e0aef1f627e4d03ae430a62c8982534" targetConnections="id-1ae1a66b15c6493698237862a788a1f5 id-3e0c55c9e7b44beb8c5f529501aba9a9" archimateElement="id-460b3e958917425ba9a2f1302409b42b">
+        <bounds x="180" y="216" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-43dd3274da6842eca17f31c809c19eb9" source="id-2e0aef1f627e4d03ae430a62c8982534" target="id-f9c77af379414c8b86ad8417ba2a3f32" archimateRelationship="id-51b9f60923c146b6bfa56584cda5df39"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-469d3decdd0f4459b5ab4aa60f08017b" source="id-2e0aef1f627e4d03ae430a62c8982534" target="id-b956921091644fbc8d57f40b7742cec2" archimateRelationship="id-763094f05efb4c3e81b8e9d816a73701"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-f9c77af379414c8b86ad8417ba2a3f32" targetConnections="id-43dd3274da6842eca17f31c809c19eb9" archimateElement="id-e0ffc30819714cefb7dbfd6699a8bcb4">
+        <bounds x="12" y="228" width="138" height="66"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-3094c6f770844721af30c6fc7a319fff" targetConnections="id-ba2ccba0d3834231acd6b52bb4724d05" archimateElement="id-9cf3501c41e140e49b310091e25bc72c">
+        <bounds x="543" y="337" width="138" height="66"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-b2e8026f97254898b73ac026c3c8a64d" archimateElement="id-ce51ee6c4bf347afb96ddf33cedded49">
+        <bounds x="168" y="48" width="126" height="81"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-3e0c55c9e7b44beb8c5f529501aba9a9" source="id-b2e8026f97254898b73ac026c3c8a64d" target="id-2e0aef1f627e4d03ae430a62c8982534" archimateRelationship="id-e0f1f372de004390a3d18317f4a0ee0d"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-b956921091644fbc8d57f40b7742cec2" targetConnections="id-469d3decdd0f4459b5ab4aa60f08017b" archimateElement="id-052b71a8010b41af9b6b1bb28f15c61d">
+        <bounds x="149" y="360" width="145" height="78"/>
+      </child>
+      <child xsi:type="archimate:Group" id="id-7a75511b165d4eb3aa34cc9d21ae7f8e" name="Hotel's Internal Network" textAlignment="1" alpha="55">
+        <bounds x="324" y="468" width="613" height="409"/>
+      </child>
+      <documentation>This view shows the layout of the hotel‘s internal communication network.</documentation>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Room Control" id="id-f11a3add9ec5427c9b4b70f31c5dc429" viewpoint="technology">
+      <child xsi:type="archimate:DiagramObject" id="id-d9af4d5477184ae7a787f11d5323272c" targetConnections="id-a93d6df932924bf1b92bf156ee7cc055 id-8d3715145a2f4f93a0e8fc0336db76b5 id-1489a14150da48f9b31fb384fce2bee0 id-c4d694b948134ef095ad45bf4dfc7ef1" archimateElement="id-b1575a25b8434af7a44ac31d2a488c40">
+        <bounds x="492" y="72" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-f919bc82fd484efba0aae416fb18f918" targetConnections="id-0c69b7233f9743d6ad494dfa90735212" archimateElement="id-f3d973f825a74b58b1ec50d9337d66a9">
+        <bounds x="492" y="168" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-a93d6df932924bf1b92bf156ee7cc055" source="id-f919bc82fd484efba0aae416fb18f918" target="id-d9af4d5477184ae7a787f11d5323272c" archimateRelationship="id-c612f83bf5d34fd3908de445f3d6925d"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-0fcec6eba98a4c44897292ab3c47fd4f" targetConnections="id-820a3a63932140fd81e04f2f47d39131 id-0c88620cfcb044dca2a1d80e21249537 id-a9af7a0b1d9b4ab5b732527ec158ac84" archimateElement="id-4c343388c4944e7182d13bbaa2c5df5e">
+        <bounds x="492" y="276" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-0c69b7233f9743d6ad494dfa90735212" source="id-0fcec6eba98a4c44897292ab3c47fd4f" target="id-f919bc82fd484efba0aae416fb18f918" archimateRelationship="id-a1379df4c2b747e19e83cc6a144296b0"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-83a942ad83f5492b88997f28c3d404ad" archimateElement="id-2c66f501ea3d4edcb470173d4e2bdf43">
+        <bounds x="492" y="-24" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-1489a14150da48f9b31fb384fce2bee0" source="id-83a942ad83f5492b88997f28c3d404ad" target="id-d9af4d5477184ae7a787f11d5323272c" archimateRelationship="id-8513d946dc7b4abb8b0764786f9e1baa"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-ec91819367a04cb280a44bcdc840cc60" archimateElement="id-736e644d31894b3ea124e55287a178ac">
+        <bounds x="720" y="72" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-c4d694b948134ef095ad45bf4dfc7ef1" source="id-ec91819367a04cb280a44bcdc840cc60" target="id-d9af4d5477184ae7a787f11d5323272c" archimateRelationship="id-d91b36539a60403290cba5d33e9312af"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-e2f976a40bb045a4883146ce082fa1a3" archimateElement="id-794f32cdb99141ac9a56f762591a80c2">
+        <bounds x="276" y="72" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-8d3715145a2f4f93a0e8fc0336db76b5" source="id-e2f976a40bb045a4883146ce082fa1a3" target="id-d9af4d5477184ae7a787f11d5323272c" archimateRelationship="id-75db9c106dfc406e9700edd56508d108"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-da0525c083d74cf09da8171827b151dd" archimateElement="id-da2271fa6e4e428e80cf792bbf44eb3d">
+        <bounds x="684" y="392" width="145" height="61"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-a9af7a0b1d9b4ab5b732527ec158ac84" source="id-da0525c083d74cf09da8171827b151dd" target="id-0fcec6eba98a4c44897292ab3c47fd4f" archimateRelationship="id-6a67bff505804cb98825f6d85ca1f1f6"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-cc303ddfae7341d391f5f7eb71be4b81" archimateElement="id-e6bc085f784041bfae6b058fce2a0c44">
+        <bounds x="298" y="395" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-820a3a63932140fd81e04f2f47d39131" source="id-cc303ddfae7341d391f5f7eb71be4b81" target="id-0fcec6eba98a4c44897292ab3c47fd4f" archimateRelationship="id-c9560e61c5104c55ba4d5f5d0d9a7f5d"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-ee57ec8b9c564168a7286fd43c4f7aba" archimateElement="id-78cb0d06d7ca465bbc69d51be23326bd">
+        <bounds x="480" y="395" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-0c88620cfcb044dca2a1d80e21249537" source="id-ee57ec8b9c564168a7286fd43c4f7aba" target="id-0fcec6eba98a4c44897292ab3c47fd4f" archimateRelationship="id-2a6c7db4b906433a8452a101a38deff4"/>
+      </child>
+      <child xsi:type="archimate:Group" id="id-75f46d7af6704d458514ad7eae0364a9" name="Smart Appliances in the Room" textAlignment="1" alpha="55">
+        <bounds x="276" y="360" width="577" height="109"/>
+      </child>
+      <documentation>This part reflects the arrangement and connection of various devices in order to realize intelligent control in the guest room.</documentation>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Payment Settlement" id="id-3fa62fa6b4c641bfb97e6b1fae047a79" viewpoint="technology">
+      <child xsi:type="archimate:DiagramObject" id="id-04fc58201f3e4e3f9819d4cf80435edc" targetConnections="id-c8c19523de2d44b5bde0159aff50532a id-26d5764f0b24439390fb83802acf6856 id-c4c7f37af5b94bd4b1d6c6e6ab1d7e47" archimateElement="id-2b02e773d11d417f8dde01c5393b3cd0">
+        <bounds x="372" y="72" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-76a4ca583c1e46e392a13c9a1910afa1" archimateElement="id-d3b7999e1a8a4ff298b995d9d4385bb1">
+        <bounds x="615" y="324" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-6b8f31cae11e458a84845aef424e437c" source="id-76a4ca583c1e46e392a13c9a1910afa1" target="id-12bc9a0f76be486eabb477c4a974c3cd" archimateRelationship="id-62507095df9e4abab350358a5bc54354"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-759936da0fb844c3a0824ed922d1a09d" source="id-76a4ca583c1e46e392a13c9a1910afa1" target="id-601b13af58814772a2e8d39a5366784e" archimateRelationship="id-a17d5fdcbf6e4571ab95ffc9b4072427"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-f213604e73a14789afea049496f4ed62" archimateElement="id-634d1251ccac41ae96b15a9abc8a4a5e">
+        <bounds x="120" y="72" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-26d5764f0b24439390fb83802acf6856" source="id-f213604e73a14789afea049496f4ed62" target="id-04fc58201f3e4e3f9819d4cf80435edc" archimateRelationship="id-cb849e5388de4f88826bc4ddb1a1f0a4"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-12bc9a0f76be486eabb477c4a974c3cd" targetConnections="id-6b8f31cae11e458a84845aef424e437c" archimateElement="id-ac88ee58519244578fb314d3ea1468cc">
+        <bounds x="384" y="180" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-72d22cb45ac146dbad74b4091cf4b4a5" source="id-12bc9a0f76be486eabb477c4a974c3cd" target="id-e4a45e0e8cac40a78ee01f90cd8b1a77" archimateRelationship="id-6e06dcd390ce42ebbc01d8f4193c9c01"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-e25e1a81f5f243938a0d7eeb3b9a4633" source="id-12bc9a0f76be486eabb477c4a974c3cd" target="id-a11da2c8fbed4042a30c59ed95a4ea44" archimateRelationship="id-352a8a76b5b3468a8413ee5ed72f9dff"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-c8c19523de2d44b5bde0159aff50532a" source="id-12bc9a0f76be486eabb477c4a974c3cd" target="id-04fc58201f3e4e3f9819d4cf80435edc" archimateRelationship="id-c98d431af2c647a28149fd92b4ea8603"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-e4a45e0e8cac40a78ee01f90cd8b1a77" targetConnections="id-72d22cb45ac146dbad74b4091cf4b4a5" archimateElement="id-d0794b2775544b0cbb702d3d3064e845">
+        <bounds x="384" y="324" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-a11da2c8fbed4042a30c59ed95a4ea44" targetConnections="id-e25e1a81f5f243938a0d7eeb3b9a4633" archimateElement="id-d601cc508d3a4dada3bb7a85eb41817a">
+        <bounds x="120" y="324" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-601b13af58814772a2e8d39a5366784e" targetConnections="id-759936da0fb844c3a0824ed922d1a09d" archimateElement="id-7a922d8771524390bac64355ed674a25">
+        <bounds x="804" y="324" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-98b26ac3b9fe4e9996635aff81315515" archimateElement="id-c330326c65cb48e3bdabad902af18982">
+        <bounds x="624" y="72" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-c4c7f37af5b94bd4b1d6c6e6ab1d7e47" source="id-98b26ac3b9fe4e9996635aff81315515" target="id-04fc58201f3e4e3f9819d4cf80435edc" archimateRelationship="id-b368c9e1ac7541febf694f0db5364e61"/>
+      </child>
+      <child xsi:type="archimate:Group" id="id-795ce67e15fc4c04966a740b176faf8e" name="Front-end Device" textAlignment="1" alpha="55">
+        <bounds x="96" y="288" width="841" height="121"/>
+      </child>
+      <child xsi:type="archimate:Group" id="id-5bc610cbc60b43e0b2d42912ffe63822" name="Back-end Device" textAlignment="1" alpha="55">
+        <bounds x="312" y="33" width="469" height="133"/>
+      </child>
+      <documentation>This view shows how the hotel's collection subsystem hardware devices collaborate and connect.</documentation>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Inventory Management" id="id-5d87e0b03a8e4bd789fbf8cd983c7899" viewpoint="application_cooperation">
+      <child xsi:type="archimate:DiagramObject" id="id-fe7b30710bd344d295ac7d661881f787" targetConnections="id-d3b090ef8efd43fa9eef6887a397a603" archimateElement="id-08adb6b187a64be994fbc5c282fdda95">
+        <bounds x="372" y="180" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-ab43fbbce03342e9aefff52d299b9dd8" source="id-fe7b30710bd344d295ac7d661881f787" target="id-d472c4544d0348d6af19be88e47a4de4" archimateRelationship="id-f0f007fd8fe248c4a3fedc230263c83e"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-692abc04c0314bedbdd75e8e35c2cfac" source="id-fe7b30710bd344d295ac7d661881f787" target="id-08a053f5f13f429ba25bd93922cfb0b9" archimateRelationship="id-2b05e61f5f2d4006b9833b7192adb9ed"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-d472c4544d0348d6af19be88e47a4de4" targetConnections="id-5531ff54cc2c40cd99fe924e8d064002 id-ab43fbbce03342e9aefff52d299b9dd8" archimateElement="id-17b8ba94065f4cba842eb0fc3f9ebbb4">
+        <bounds x="576" y="180" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-d75576dc716546f68412c42464c36411" source="id-d472c4544d0348d6af19be88e47a4de4" target="id-c159c7e18d974fb1b8bf9f0378a602e6" archimateRelationship="id-c0068cd084254a29924354165b0fcea7"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-36b610c3e2644e4da237b56ad4552998" archimateElement="id-6f2d70731cd74e70a0a6aabd92a404bd">
+        <bounds x="756" y="180" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-5531ff54cc2c40cd99fe924e8d064002" source="id-36b610c3e2644e4da237b56ad4552998" target="id-d472c4544d0348d6af19be88e47a4de4" archimateRelationship="id-a3b616d39aea45139089b5261e8e47e3"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-c159c7e18d974fb1b8bf9f0378a602e6" targetConnections="id-d75576dc716546f68412c42464c36411" archimateElement="id-4b7b3bbbbfe24912a87ee5f9a1e6627b">
+        <bounds x="588" y="300" width="130" height="73"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-470e33f5d6ab4f74b796fc1bd9762580" archimateElement="id-d78d8b46e6914c66a6ce67ad241d6ab7">
+        <bounds x="132" y="180" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-d3b090ef8efd43fa9eef6887a397a603" source="id-470e33f5d6ab4f74b796fc1bd9762580" target="id-fe7b30710bd344d295ac7d661881f787" archimateRelationship="id-5fe969d5e3c942ff8b40313b69f20c08"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-08a053f5f13f429ba25bd93922cfb0b9" targetConnections="id-692abc04c0314bedbdd75e8e35c2cfac" archimateElement="id-e2b67db7183345f9b71db634d2f6f40b">
+        <bounds x="372" y="336" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-457c6fed4b5642899fbe93edf84bd5a6" source="id-08a053f5f13f429ba25bd93922cfb0b9" target="id-93a88f55438a4228970e547a532d828c" archimateRelationship="id-07ce0de0788e457b8b0382e6a614a717"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-93a88f55438a4228970e547a532d828c" targetConnections="id-457c6fed4b5642899fbe93edf84bd5a6" archimateElement="id-a87ba0dc398b426a9195431d4761db8e">
+        <bounds x="372" y="444" width="120" height="55"/>
+      </child>
+      <documentation>Manage the in and out of hotel inventory, and can take inventory.
+</documentation>
+    </element>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Fire Protection" id="id-8d1290556abc4a1b8d5f5e577f7e19f6" viewpoint="physical">
+      <child xsi:type="archimate:DiagramObject" id="id-ca9eaae3fdb34603b19f7111886bbec5" archimateElement="id-7a3a80e2e3464c5aa56c8657b5ccd17d">
+        <bounds x="204" y="24" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-70b6038c4b47465a857fbcdf4cbda998" source="id-ca9eaae3fdb34603b19f7111886bbec5" target="id-594944a19028414cb21b29b9759dc312" archimateRelationship="id-3ea54ce1ac204cfab32941926158d148"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-ebdf5d65c0cc463b976dd7811772704f" archimateElement="id-11dbdae5f0e34f529aea64155d9c7744">
+        <bounds x="22" y="180" width="137" height="53"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-ce883782264c4267aebc5300bf6c011f" source="id-ebdf5d65c0cc463b976dd7811772704f" target="id-594944a19028414cb21b29b9759dc312" archimateRelationship="id-657264f63a2947859172dd9094cc0b88"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-594944a19028414cb21b29b9759dc312" targetConnections="id-70b6038c4b47465a857fbcdf4cbda998 id-ce883782264c4267aebc5300bf6c011f id-0fa39b7f85ba4d24964196308408ed77" archimateElement="id-0c5bd7784c0143e9b2dab8b29856ea4f">
+        <bounds x="192" y="204" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-12830e7b01a2486a9d8c8133df7aa7ea" source="id-594944a19028414cb21b29b9759dc312" target="id-5b8f93d25d0445748267f8399b167326" archimateRelationship="id-5bc434d91946403f9f9000f64d90143b"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-be99f363e8c649adb9d9af9055138ee6" source="id-594944a19028414cb21b29b9759dc312" target="id-e6b8baf91f21411ea0edbd4459caf3ac" archimateRelationship="id-add483fae7024889af0fd9f46140232a"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-5b8f93d25d0445748267f8399b167326" targetConnections="id-12830e7b01a2486a9d8c8133df7aa7ea" archimateElement="id-cb03e61c214749f7b84c29f18152aa08">
+        <bounds x="372" y="214" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-62a53314b50e41e3a757f87dc94e622e" source="id-5b8f93d25d0445748267f8399b167326" target="id-ac1a5540070b436f9c8ae316c37d0875" archimateRelationship="id-6476e9eb93144b0286fd2df346d5a94d"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-07921647f6934741891a103716ad5dfd" targetConnections="id-071229e95e9245c7a69a7a87e2a9097b" archimateElement="id-663a8aa3fa5a47a08e82eea6e5a25f7f">
+        <bounds x="696" y="36" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-79c76b764a65463e813b9ebc84043a5a" targetConnections="id-4aee932d4a8b47debf959edb3036a685" archimateElement="id-185895e806304033ad2a47f012f782ab">
+        <bounds x="696" y="126" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-b7d408dd80be4e5a9f181add4181f61c" targetConnections="id-9dd4342b96b7431fa89663bab509cff7" archimateElement="id-08a11f69f27d4e5083f0675e173a9edb">
+        <bounds x="694" y="216" width="124" height="71"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-5e6a1aff79ac4bada0aac2d9448fc1f2" targetConnections="id-6d8b248d16e14fa0be8e8d729aa31332" archimateElement="id-d1f34f38b2144cab887ee25e74336a4b">
+        <bounds x="696" y="336" width="120" height="55"/>
+        <child xsi:type="archimate:DiagramObject" id="id-649fa67c9a2947a499b1084d07c62137" archimateElement="id-f3a6500480ee42908a68a7bce67a9751">
+          <bounds x="100" y="43" width="120" height="55"/>
+        </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-ac1a5540070b436f9c8ae316c37d0875" targetConnections="id-62a53314b50e41e3a757f87dc94e622e" archimateElement="id-8f3b0479126d48c7981fa1ee3ee28ac8">
+        <bounds x="468" y="108" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-071229e95e9245c7a69a7a87e2a9097b" source="id-ac1a5540070b436f9c8ae316c37d0875" target="id-07921647f6934741891a103716ad5dfd" archimateRelationship="id-28f866d7a4284c7186e840d49dc234b5"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-4aee932d4a8b47debf959edb3036a685" source="id-ac1a5540070b436f9c8ae316c37d0875" target="id-79c76b764a65463e813b9ebc84043a5a" archimateRelationship="id-1a3eb98996e741b79bc834d42efbb41d"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-9dd4342b96b7431fa89663bab509cff7" source="id-ac1a5540070b436f9c8ae316c37d0875" target="id-b7d408dd80be4e5a9f181add4181f61c" archimateRelationship="id-02ebde09c9ff47c391d418f7e9a5ec8b"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-6d8b248d16e14fa0be8e8d729aa31332" source="id-ac1a5540070b436f9c8ae316c37d0875" target="id-5e6a1aff79ac4bada0aac2d9448fc1f2" archimateRelationship="id-017432afbc5c4b5291434902d2bb76d2"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-e6b8baf91f21411ea0edbd4459caf3ac" targetConnections="id-be99f363e8c649adb9d9af9055138ee6" archimateElement="id-326c26bb47824793a9d1ae8779ba0468">
+        <bounds x="228" y="326" width="121" height="76"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-c58c7c75125345de8552b124814396e7" archimateElement="id-d286136f5769404fa2df94d925b91cdb">
+        <bounds x="72" y="330" width="121" height="68"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-0fa39b7f85ba4d24964196308408ed77" source="id-c58c7c75125345de8552b124814396e7" target="id-594944a19028414cb21b29b9759dc312" archimateRelationship="id-8be7a26c3dcc483b851b790ba422ee9a"/>
+      </child>
+      <child xsi:type="archimate:Group" id="id-0e49736e22e24e1a84e2a23354586b80" name="Emergency Fire  Equipment" textAlignment="1" alpha="55">
+        <bounds x="647" y="12" width="218" height="397"/>
+      </child>
+      <documentation>This view is the hardware layout of the hotel's fire protection subsystem.</documentation>
+    </element>
+  </folder>
+</archimate:model>
